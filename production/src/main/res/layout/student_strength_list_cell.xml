@@ -1,0 +1,42 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_small">
+
+    <LinearLayout
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:padding="@dimen/padding_small">
+
+        <include
+            android:id="@+id/hd"
+            layout="@layout/activity_student_strength_report"
+            android:visibility="gone" />
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_weight=".5"
+            android:id="@+id/tv_student_strength_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/element_margin"
+            android:ems="4"
+            android:text="KG1"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_weight=".5"
+            android:id="@+id/tv_student_strength_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/big_margin"
+            android:layout_toRightOf="@+id/tv_student_strength_class"
+            android:ems="5"
+            android:text="30"
+            android:textSize="@dimen/text_size" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

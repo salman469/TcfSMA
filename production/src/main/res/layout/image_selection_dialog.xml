@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_small"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="@dimen/margin_small"
+    android:padding="@dimen/padding_small">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/ll_camera_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="@dimen/margin_medium">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/camera"
+                android:padding="@dimen/padding_small"
+                />
+
+            <androidx.legacy.widget.Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:padding="@dimen/padding_small"
+                android:text="Camera"
+                android:textSize="@dimen/text_size_heading"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_gallery_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="@dimen/margin_medium">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gallery"
+                android:padding="@dimen/padding_small"
+                android:scaleType="center"
+                />
+
+            <androidx.legacy.widget.Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:padding="@dimen/padding_small"
+                android:text="Gallery"
+                android:textSize="@dimen/text_size_heading"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

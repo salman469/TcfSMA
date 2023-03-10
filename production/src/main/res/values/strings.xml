@@ -1,0 +1,414 @@
+<resources>
+    <!--<string name="app_name">TCF Fees Collection</string>-->
+    <string name="app_name">TCF SMA</string>
+
+    <!--    live-->
+    <string name="BASE_URL">https://sisappsrv.tcf.org.pk:6443</string>
+    <string name="BUILD_NO"></string>
+    <string name="URL_DOWNLOAD_PROFILE_IMAGES">http://sms.tcf.org.pk/ePanel/Resources/SIS_APP_IMAGES/</string>
+
+    <string name="SURVEY_BASE_URL">https://sflapi.tcf.org.pk:5443/api/</string>
+
+    <!--    REPORT URL-->
+    <string name="API_DOMAIN_REPORTS">https://sflive.tcf.org.pk:2443/Survey/SurveysConductedList/</string>
+
+    <string name="captured_image_path">SIS/capturedImages</string>
+    <string name="title_activity_drawer">Dashboard</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_hint">Search School</string>
+    <string name="search_filer">Search Filer :</string>
+    <string name="hint_school">School Name</string>
+    <string name="hint_class">Class Name</string>
+    <string name="hint_student_name">Student Name</string>
+    <string name="hint_section">Section Name</string>
+    <string name="hint_gr_no">GR No:</string>
+    <string name="data_of_birth">D.O.B:</string>
+    <string name="data_of_admission">Date of Admission:</string>
+    <string name="father_name">Father Name:</string>
+    <string name="father_occupation">Father Occupation:</string>
+    <string name="mother_name">Mother Name:</string>
+    <string name="mother_occupation">Mother’s Occupation:</string>
+    <string name="guardian_name">Guardian Name:</string>
+    <string name="guardian_occupation">Guardian’s Occupation:</string>
+    <string name="studentview_previous_school">Previous School:</string>
+    <string name="student_view_name">Name:</string>
+    <string name="student_id">Std ID:</string>
+    <string name="studentview_class_previous_school">Class in Previous School:</string>
+    <string name="studentview_class">Class:</string>
+    <string name="studentview_section">Section:</string>
+    <string name="studentview_gender">Gender:</string>
+    <string name="studentview_cnic">Father’s NIC:</string>
+    <string name="studentview_mother_cnic">Mother’s NIC:</string>
+    <string name="studentview_guardian_cnic">Guardian’s NIC:</string>
+    <string name="studentview_formB">Form B:</string>
+    <string name="studentview_contact">Contact No:</string>
+    <string name="studentview_address">Address:</string>
+    <string name="studentview_dropout">Select reason to drop out the student:</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="login">Login</string>
+
+
+    <string name="students">Students</string>
+
+    <string name="task">Task</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="reports">Reports</string>
+    <string name="view_profile">View Profile</string>
+    <string name="new_enrollment">New Enrollment</string>
+    <string name="logout">Logout</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+    <string name="class_tv">Class:</string>
+    <string name="changePassword">Change Password</string>
+    <string name="school_enrollment_text">School enrollment</string>
+    <string name="school_area_highest_enrollment">5 percent less than area highest enrollment</string>
+    <string name="school_drop_out_rate">School drop out rate</string>
+    <string name="school_drop_out_rate_month">5 percent Greater than last month</string>
+
+
+    <string name="school_daily_student_attend">Daily student attendance</string>
+    <string name="school_daily_student_attend_month">5 percent Greater than last month</string>
+
+    <string name="school_cell">School:</string>
+    <string name="school">School</string>
+
+    <string name="feesCollection">Finance</string>
+    <string name="attendance">Attendance</string>
+    <string name="promotions_graduation">Promotions/Graduation</string>
+    <string name="withdrawal_dropoff">Withdrawal/DropOff</string>
+    <string name="student_picture">Student Picture: </string>
+    <string name="capture">Capture</string>
+    <string name="preview">Preview</string>
+    <string name="remove">Remove</string>
+    <string name="b_form_nic">B Form/NIC</string>
+    <string name="admission_form">Admission Form</string>
+    <string name="school_dashboard">Dashboard</string>
+    <string name="class_text">Class:</string>
+    <string name="submit">Submit</string>
+    <string name="father">Father:</string>
+    <string name="select_section">Select Section</string>
+    <string name="select_class_section">Select Class And Section</string>
+    <string name="select_school">Select School</string>
+    <string name="select_class">Select Class</string>
+    <string name="section">Section:</string>
+    <string name="title_activity_student_profile">StudentProfile</string>
+    <string name="student_profile_text">Student\'s Profile</string>
+    <string name="cashReceived">cashReceived</string>
+    <string name="accountStatement">accountStatement</string>
+    <string name="cash_in_hand">cashInHand</string>
+    <string name="viewReceivables">View Receivables</string>
+    <string name="cashCorrection">cashCorrection</string>
+    <string name="studentsReport">Student\'s Report</string>
+    <string name="collectionReport">Student Collection Report</string>
+    <string name="depositHistoryReport">Deposit History Report</string>
+    <string name="schoolsReport">School\'s Report</string>
+    <string name="attendanceReport">Attendance Report</string>
+    <string name="feesCollectionReport">Fees Collection Report</string>
+    <string name="ssrReport">SSR Report</string>
+    <string name="classReport">Class Report</string>
+    <string name="viewSSR">View SSR</string>
+    <string name="previousMonthSSR">Previous Month SSR</string>
+    <string name="newAdmissionThisMonth">New Admission</string>
+    <string name="withDrawalsThisMonth">Withdrawals</string>
+
+    <!--View SSR Strings-->
+    <string name="graduateThisMonth">Graduates </string>
+    <string name="totalCurrentSSR">Total Current SSR</string>
+    <string name="student_edit_profile_text">Edit Profile</string>
+    <string name="attendance_text">Attendance</string>
+    <string name="student_dropout_text">Student Dropout</string>
+    <string name="student_readmisison">Student Readmission</string>
+    <string name="student_fee_set_text">Set Fees</string>
+
+    <string name="select_status">Select Status</string>
+    <string name="search_text">Search</string>
+    <string name="student_status">Student Status</string>
+    <string name="tv_signup_member">Not a Member ?</string>
+    <string name="tv_signup">Sign Up</string>
+    <string name="et_emil">Email</string>
+    <string name="et_username">Username</string>
+    <string name="et_password">Password</string>
+    <string name="et_conform_password">Confirm Password</string>
+    <string name="student">Student</string>
+    <string name="promotions">Promotions</string>
+    <string name="post_date">Post Date:</string>
+    <string name="status">Status:</string>
+    <string name="enrollmetn_status">Enrollment Status</string>
+    <string name="address">Address:</string>
+    <string name="present">Present:</string>
+    <string name="absent">Absent:</string>
+    <string name="on_leave">On Leave:</string>
+    <string name="alert">Alert</string>
+    <string name="are_you_sure_you_want_to_save_the_attendance">Are you sure you want to save this attendance?</string>
+    <string name="are_you_sure_you_want_to_promoted_these_students">Are you sure you want to promote these students?</string>
+    <string name="are_you_sure_you_want_to_graduate_these_students">Are you sure you want to graduate these students?</string>
+    <string name="promoted">Promoted:</string>
+    <string name="graduated">Graduated:</string>
+    <string name="non_graduated">Not Graduated:</string>
+    <string name="non_promoted">Not Promoted:</string>
+    <string name="profile_validation">Profile Validation</string>
+    <string name="dsnuapproved_students">Unapproved Students</string>
+    <string name="unapproved_student">Unapproved Students</string>
+    <string name="principal">Principal</string>
+    <string name="area_manager">Area Manager</string>
+    <string name="area_coordinator">Area Coordinator</string>
+    <string name="Strength_Validationn">Student Strength Validation</string>
+    <string name="Student_Report">Students Report</string>
+    <string name="School_Report">School Report</string>
+    <string name="edit_validation_capital_alphabat">ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="edit_validation_alphaba">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz </string>
+    <string name="title_activity_dsnuapproved_student_reason">DSNUapprovedStudentReason</string>
+    <string name="percentage">Percentage</string>
+    <string name="notification_alert">Notification alert</string>
+    <string name="bottom_five">Bottom five</string>
+    <string name="force_sync"><u>Force sync</u></string>
+    <string name="jv_no">JV No.</string>
+    <string name="date">Date</string>
+    <string name="description">Description</string>
+    <string name="amount">Amount</string>
+    <string name="last_deposit_date">Last Deposit Date</string>
+    <string name="today_date">Today Date</string>
+    <string name="admission_fees">Admission Fees</string>
+    <string name="exam_fees">Exam Fees</string>
+    <string name="monthly_fees">Monthly Fees</string>
+    <string name="sales_uniform">Sales (uniform)</string>
+    <string name="sales_copies">Sales (Copies)</string>
+    <string name="sales_books">Sales (Books)</string>
+    <string name="receipt_uniform">Receipt (uniform)</string>
+    <string name="receipt_copies">Receipt (Copies)</string>
+    <string name="receipt_books">Receipt (Books)</string>
+    <string name="books">Books</string>
+
+    <string name="copies">Copies</string>
+    <string name="uniform">Uniform</string>
+    <string name="total">Total</string>
+    <string name="deposit_in_bank">Deposit In Bank</string>
+    <string name="slip_sr_no">Slip Sr.No</string>
+    <string name="others">Others</string>
+    <string name="id">Id</string>
+    <string name="Rno">Rno</string>
+    <string name="balance">Balance</string>
+    <string name="ssr">SSR:</string>
+    <string name="accessibility">Accessibility</string>
+    <string name="sync_status">Sync Status</string>
+    <string name="attendance_taken">Attendance Taken</string>
+    <string name="receivables">Receivables</string>
+    <string name="new_admission">New Admission</string>
+    <string name="withdrawals">Withdrawals</string>
+    <string name="avg_fees_collection">Average Fees Collection</string>
+    <string name="avg_set_fees_collection">Average Set Fees</string>
+    <string name="weakest_attendance">Weakest Attendance</string>
+    <string name="highest_dues_from_students">Highest Dues From Students</string>
+    <string name="session_info">Students</string>
+    <string name="session_Information">Current Session</string>
+    <string name="aboutUsDetails">Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nLorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galleyLorem Ipsum is simply dummy text of the printing.Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nLorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galleyLorem Ipsum is simply dummy text of the printing.</string>
+    <string name="aboutUs">About us</string>
+    <string name="active">Active</string>
+    <string name="inactive">Inactive</string>
+
+    <string name="all">All</string>
+
+
+    <string name="New_admissions">New Admissions</string>
+
+    <string name="Readmissions">Readmissions</string>
+
+    <string name="Withdrawals">Withdrawals</string>
+    <string name="Promotions">Promotions</string>
+
+    <string name="Graduations">Graduations</string>
+
+    <string name="search_label">SchoolLabel</string>
+    <string name="hr">HR</string>
+    <string name="employee">Employees</string>
+
+    <!--Used in all student search activity xmls-->
+    <string name="select_designation">Select Designation</string>
+    <string name="select_leave_type">Select Leave Type</string>
+    <string name="select_reason">Select Reason</string>
+    <string name="leaves">Leaves</string>
+    <string name="resignations">Resignations</string>
+    <string name="terminations">Terminations</string>
+    <string name="late">Late:</string>
+    <string name="leave">Leave:</string>
+    <string name="fee_type">Fee Type</string>
+    <string name="opening_balance">Opening Balance</string>
+    <string name="recievable">Receivable</string>
+    <string name="received">Received</string>
+    <string name="schoolvisit">School Forms</string>
+    <string name="upload">Uploading database/logs Please wait…</string>
+    <string name="student_transfer_text">Student Transfer</string>
+    <string name="transfer">Transfer</string>
+    <string name="Continue">Continue</string>
+    <string name="student_gr_register">GR Register</string>
+    <string name="balance_after_reconciliation">Balance after Reconciliation</string>
+    <string-array name="schools">
+        <item>School 1</item>
+        <item>School 2</item>
+        <item>School 3</item>
+        <item>School 4</item>
+        <item>School 5</item>
+    </string-array>
+    <string-array name="classes">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="section">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
+    <string-array name="reason">
+        <item>i.	Job </item>
+        <item>ii.	Shifting of Family</item>
+        <item>iii.	Behavior Problems</item>
+        <item>iv.	Marriage</item>
+        <item>v.	Long Distance</item>
+        <item>vi.	Weak in Studies </item>
+        <item>vii.	Long Absence</item>
+        <item>viii.	Not Allowed to Study further</item>
+        <item>ix.	Shifted to another TCF school</item>
+        <item>xi.	Lack of interest </item>
+        <item>xii.	Others </item>
+    </string-array>
+    <string-array name="gender_array">
+        <item>Select gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="corretcionType">
+        <item>Waiver</item>
+        <item>Correction</item>
+    </string-array>
+
+    <!--Dashboard Strings-->
+
+    <!--HR String-->
+    <string-array name="schoolsList">
+        <item>BSS</item>
+        <item>MCHS</item>
+        <item>AKHSS</item>
+        <item>KGS</item>
+        <item>KPS</item>
+    </string-array>
+    <string-array name="schoolActivity">
+        <item>@string/active</item>
+        <item>@string/inactive</item>
+        <item>@string/all</item>
+
+    </string-array>
+    <string-array name="studentInfo">
+        <item>Name</item>
+        <item>Gr No</item>
+    </string-array>
+
+
+    <!--    Survey Strings-->
+
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="title_activity_record_sound" translatable="false">Record Survey</string>
+    <string name="title_activity_play_sound" translatable="false">Play Survey</string>
+    <string name="title_activity_splash" translatable="false">IMCL Facility Check</string>
+    <string name="title_activity_login" translatable="false">Login</string>
+    <string name="title_activity_area_scanner" translatable="false">Outlets near me</string>
+    <string name="title_activity_map_scanner" translatable="false">Map</string>
+    <string name="title_activity_survey_form" translatable="false">Survey Form</string>
+    <string name="title_activity_respondent_registration" translatable="false">RespondentRegistration</string>
+    <string name="title_activity_offline_forms" translatable="false">Offline forms</string>
+    <string name="title_activity_test_widget" translatable="false">TestWidget</string>
+    <string name="title_activity_pending_surveys" translatable="false">Partial Surveys</string>
+    <string name="title_activity_slider_menu_manager" translatable="false">SliderMenuManager</string>
+    <string name="drawer_open" translatable="false">Open</string>
+    <string name="drawer_close" translatable="false">Close</string>
+    <string name="poi">Outlets on Map</string>
+    <string name="outlets">Outlets near me</string>
+    <string name="district">District</string>
+    <string name="respondent">Respondent Registration</string>
+    <string name="log">Show Log</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="select_subjects">Select Sub.</string>
+    <string name="expenses">Expenses</string>
+    <string name="no_pending_records_found">No Pending Records Found</string>
+    <string name="rate_this_application">Rate this Application</string>
+    <string name="if_you_are_happy_with_this_app_please_give_us_5_stars">If you are happy with this app, please give us 5 stars</string>
+    <string name="help_feedback"><![CDATA[Help & Feedback]]></string>
+    <string name="rate_us">Rate Us</string>
+    <string name="help">Help</string>
+    <string name="mobile_no">Mobile No:</string>
+    <string name="mobile_num_format">eg: 03xxxxxxxxx</string>
+    <string name="mobile_num_new_format">eg: 92xxxxxxxxxx</string>
+    <string name="feedback">Feedback</string>
+    <string name="faqs">FAQ\'s</string>
+    <string name="user_manual">User Manual</string>
+    <string name="policies">Policies</string>
+    <string name="downloading_please_wait">Downloading Please wait!</string>
+    <string name="no_records_found">No Records Found</string>
+    <string name="tooltip_profile_progress">Profile Picture - 20%\nDate Of Birth - 20%\nBform Number - 10%\nContact Number - 10%\nFather Name - 10%\nFather Cnic Number - 20%\nFather Occupation - 10%</string>
+    <string name="select_subhead">Select Subhead</string>
+    <string name="select_employee">Select Employee</string>
+    <string name="cheque_tag">Cheque #</string>
+    <string name="receipt_tag">Receipt #</string>
+    <string name="cheque">Cheque</string>
+    <string name="receipt">Receipt</string>
+    <string name="completed">Completed:</string>
+    <string name="total_mtt_ett">Total:</string>
+    <string name="ett_Remaining">Remaining ETT:</string>
+    <string name="mtt_column_name"> Mandatory Test Takers</string>
+    <string name="ett_column_name">Remaining Eligible Test Takers</string>
+
+    <string name="remaining">Remaining:</string>
+    <string name="device_id">Device ID:</string>
+    <string name="date_hint">YYYYMMNN</string>
+    <string name="title_location_permission">Location Permission Access</string>
+    <string name="text_location_permission">Please allow location access in order to login in SMA</string>
+    <string name="update">Update</string>
+    <string name="fee_target">Fee Target:</string>
+    <string name="avg_set_fee">Avg. Set Fee:</string>
+    <string name="difference">Difference:</string>
+    <string name="please_select">Please Select</string>
+    <string name="religion">Religion:</string>
+    <string name="nationality">Nationality:</string>
+    <string name="electiveSubjects">Elective Subjects:</string>
+    <string name="email">Email:</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="isOrphan">Is Orphan:</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="death_certificate">Death Certificate</string>
+    <string name="isDisabled">Is Disabled:</string>
+    <string name="medical_certificate">Medical Certificate</string>
+    <string-array name="no_yes_array">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+    <string name="org_name">\@tcf.org.pk</string>
+    <string name="class_avg_fees">Class Avg. Fees</string>
+    <string name="school_target">School Target</string>
+    <string name="set_fee_difference">Difference</string>
+
+    <string name="to_be_verified_title">To Be Verified</string>
+    <string name="available_for_approval_title">Available For Approval</string>
+    <string name="approved_title">Approved</string>
+    <string name="not_approved_title">Not Approved</string>
+    <string name="federal_board_title">Federal Board Status</string>
+
+</resources>

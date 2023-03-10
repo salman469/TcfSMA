@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/st_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@color/light_app_green"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding"
+        android:weightSum="2">
+
+
+        <TextView
+            android:id="@+id/tv_slipNo"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="xxxxx"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="xxxxx"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_depositedBy"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="xxxxx"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="xxxxx"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size" />
+
+    </LinearLayout>
+
+</LinearLayout>

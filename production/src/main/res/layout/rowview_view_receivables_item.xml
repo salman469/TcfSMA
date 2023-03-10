@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+>
+
+    <TextView
+        android:id="@+id/tvPurpose"
+        android:layout_width="0dp"
+        android:textSize="@dimen/text_size"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:background="@drawable/textview_border_gray"
+        tools:text="This Academic Year"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvTotalDue"
+        android:layout_width="0dp"
+        android:padding="@dimen/padding_small"
+        android:gravity="center"
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/colorBlack"
+        tools:text="12,000.00"
+        android:background="@drawable/textview_border_gray"
+        android:layout_weight="2"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"
+
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvCollected"
+        android:layout_width="0dp"
+        android:padding="@dimen/padding_small"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size"
+        tools:text="8,500.00"
+        android:background="@drawable/textview_border_gray"
+        android:layout_weight="2"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"
+        android:singleLine="true"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvBalance"
+        android:layout_width="0dp"
+        tools:text="3,500.00"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:padding="@dimen/padding_small"
+        android:background="@drawable/textview_border_gray"
+        android:textSize="@dimen/text_size"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:focusable="true"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

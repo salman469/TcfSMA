@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray2"
+        android:orientation="vertical">
+        <!--Session Info-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_session_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="@dimen/card_elevation">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_sessionInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_app_green"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_small"
+                    android:text=""
+                    android:textColor="@color/grayheadingsdb"
+                    android:textSize="@dimen/text_size_heading"
+                    android:textStyle="bold" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/session_head"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignEnd="@+id/tv_sessionInfo"-->
+                <!--android:text="(2018-2019)"-->
+                <!--android:gravity="center"-->
+                <!--android:textStyle="bold"-->
+                <!--android:visibility="gone"-->
+                <!--android:padding="@dimen/margin_small"-->
+                <!--android:textColor="@color/colorBlack" />-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sessionInfo"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_small">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Start Date: "
+                                android:textColor="@color/grayheadingsdb"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_sessionStartDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="0"
+                                android:textColor="@color/grayheadingsdb" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="End Date: "
+                                android:textColor="@color/grayheadingsdb"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_sessionEndDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="0"
+                                android:textColor="@color/grayheadingsdb" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_working_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="@dimen/card_elevation">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_workingDaysHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_app_green"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_small"
+                    android:text="Working Days"
+                    android:textColor="@color/grayheadingsdb"
+                    android:textSize="@dimen/text_size_heading"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_workingDaysHeader"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_small">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/margin_small"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Total: "
+                                android:textColor="@color/grayheadingsdb"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_workingDays"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="0"
+                                android:textColor="@color/grayheadingsdb" />
+                            />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Elapsed: "
+                                android:textColor="@color/grayheadingsdb"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_daysElapsed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="0"
+                                android:textColor="@color/grayheadingsdb" />
+                            />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Remaning: "
+                                android:textColor="@color/grayheadingsdb"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_daysRemaning"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="0"
+                                android:textColor="@color/grayheadingsdb" />
+                            />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_small"
+            android:visibility="visible"
+            app:eventsEnabled="true"
+            app:headerColor="@color/app_green"
+            app:pagesColor="@color/light_app_green"
+            app:selectionColor="@color/app_green"
+            app:type="one_day_picker" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:padding="@dimen/padding_small"
+        android:text="Cash in Hand (This School)"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_cashInHand_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".8"
+        android:gravity="right"
+        android:padding="@dimen/padding_small"
+        android:text="xxxxx"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold" />
+
+</LinearLayout>

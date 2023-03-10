@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/st_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/card_elevation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small"
+        android:weightSum="1.2"
+        >
+        <TextView
+            android:id="@+id/tv_totalWorkingDays"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:gravity="center"
+            android:text="Total Working Days"
+            android:textSize="@dimen/text_size"
+             />
+        <TextView
+            android:id="@+id/tv_Present"
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:gravity="center"
+            android:text="Present"
+            android:textSize="@dimen/text_size"
+             />
+
+
+        <TextView
+            android:id="@+id/tv_Absent"
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:gravity="center"
+            android:text="Absent"
+            android:textSize="@dimen/text_size"
+             />
+
+        <TextView
+            android:id="@+id/tv_AttendancePercentage"
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:gravity="center"
+            android:text="%Attendance"
+            android:textSize="@dimen/text_size"
+             />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

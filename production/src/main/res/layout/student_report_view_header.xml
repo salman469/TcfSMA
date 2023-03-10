@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@color/light_gray"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small"
+        >
+        <TextView
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:text="GR.No"
+            android:gravity="center"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:gravity="center"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:text="Class - Section"
+            android:gravity="center"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:text="Fee Category"
+            android:gravity="center"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:text="Monthly Fee"
+            android:gravity="center"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:text="Total Dues"
+            android:gravity="center"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:text="Attendance"
+            android:gravity="center"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/tinnny_margin"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:visibility="visible">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@color/app_green"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:padding="@dimen/padding">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Total "-->
+                <!--android:textColor="@color/white_color"-->
+                <!--android:textSize="@dimen/text_size"-->
+                <!--android:textStyle="bold" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_total_students"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="0"-->
+                <!--android:textColor="@color/white_color"-->
+                <!--android:textSize="@dimen/text_big"-->
+                <!--android:textStyle="bold" />-->
+        <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+
+
+</LinearLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:orientation="vertical">-->
+
+<!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="@dimen/margin_small"-->
+    <!--android:background="@color/light_gray"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:padding="@dimen/padding_small"-->
+    <!--android:weightSum="3.1">-->
+    <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight=".4"-->
+        <!--android:text="GR.No"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="@dimen/text_size"-->
+        <!--android:textStyle="bold" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight=".5"-->
+        <!--android:text="Full Name"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="@dimen/text_size"-->
+        <!--android:textStyle="bold" />-->
+    <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/margin_small"-->
+        <!--android:layout_weight=".4"-->
+        <!--android:text="Class - Section"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="@dimen/text_size"-->
+        <!--android:textStyle="bold" />-->
+    <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/margin_small"-->
+        <!--android:layout_weight=".5"-->
+        <!--android:text="Fee Category"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="@dimen/text_size"-->
+        <!--android:textStyle="bold" />-->
+    <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/margin_small"-->
+        <!--android:layout_weight=".5"-->
+        <!--android:text="Monthly Fee"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="@dimen/text_size"-->
+        <!--android:textStyle="bold" />-->
+    <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/margin_small"-->
+        <!--android:layout_weight=".5"-->
+        <!--android:text="Total Dues"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="@dimen/text_size"-->
+        <!--android:textStyle="bold" />-->
+    <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/margin_small"-->
+        <!--android:layout_weight=".3"-->
+        <!--android:text="Attendance"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="@dimen/text_size"-->
+        <!--android:textStyle="bold" />-->
+
+<!--</LinearLayout>-->
+
+<!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;android:id="@+id/ll1"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_marginTop="@dimen/tinnny_margin"&ndash;&gt;-->
+<!--&lt;!&ndash;android:orientation="horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;android:visibility="visible">&ndash;&gt;-->
+
+<!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+<!--&lt;!&ndash;android:background="@color/app_green"&ndash;&gt;-->
+<!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;android:orientation="horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;android:padding="@dimen/padding">&ndash;&gt;-->
+
+<!--&lt;!&ndash;<TextView&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;android:text="Total "&ndash;&gt;-->
+<!--&lt;!&ndash;android:textColor="@color/white_color"&ndash;&gt;-->
+<!--&lt;!&ndash;android:textSize="@dimen/text_size"&ndash;&gt;-->
+<!--&lt;!&ndash;android:textStyle="bold" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;<TextView&ndash;&gt;-->
+<!--&lt;!&ndash;android:id="@+id/tv_total_students"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;android:text="0"&ndash;&gt;-->
+<!--&lt;!&ndash;android:textColor="@color/white_color"&ndash;&gt;-->
+<!--&lt;!&ndash;android:textSize="@dimen/text_big"&ndash;&gt;-->
+<!--&lt;!&ndash;android:textStyle="bold" />&ndash;&gt;-->
+<!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+
+<!--</LinearLayout>-->
+

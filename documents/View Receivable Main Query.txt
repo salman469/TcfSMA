@@ -1,0 +1,25 @@
+
+
+select 'R' as type, ar.created_on, sum(ar.fees_admission * case when ar.is_correction = 0 then -1 else 1 end) as fees_admission, 
+sum(ar.fees_exam* case when ar.is_correction = 0 then -1 else 1 end) as fees_exam, 
+sum(ar.fees_tution* case when ar.is_correction = 0 then -1 else 1 end) as fees_tution, 
+sum(ar.fees_books* case when ar.is_correction = 0 then -1 else 1 end) as fees_books, 
+sum(ar.fees_copies* case when ar.is_correction = 0 then -1 else 1 end) as fees_copies, 
+sum(ar.fees_uniform* case when ar.is_correction = 0 then -1 else 1 end) as fees_uniform, 
+sum(ar.fees_others* case when ar.is_correction = 0 then -1 else 1 end) as fees_others  
+from AppReceipt ar 
+inner join school_class sc on sc.id = ar.schoolclass_id and sc.school_id = 1112 
+where ar.created_on < '2019-01-01 00:00:00 AM' 
+group by ar.created_on
+union 
+select 'I' as type, ai.created_on, sum(ai.fees_admission * case when ai.created_from = 'W' or ai.created_from = 'B' then -1 else 1 end) as fees_admission, 
+sum(ai.fees_exam * case when ai.created_from = 'W' or ai.created_from = 'B' then -1 else 1 end) as fees_exam, 
+sum(ai.fees_tution * case when ai.created_from = 'W' or ai.created_from = 'B' then -1 else 1 end) as fees_tution, 
+sum(ai.fees_books * case when ai.created_from = 'W' or ai.created_from = 'B' or ai.created_from = 'S' then -1 else 1 end) as fees_books, 
+sum(ai.fees_copies * case when ai.created_from = 'W' or ai.created_from = 'B' or ai.created_from = 'S' then -1 else 1 end) as fees_copies,
+sum(ai.fees_uniform * case when ai.created_from = 'W' or ai.created_from = 'B' or ai.created_from = 'S' then -1 else 1 end) as fees_uniform, 
+sum(ai.fees_others * case when ai.created_from = 'W' or ai.created_from = 'B' or ai.created_from = 'S' then -1 else 1 end) as fees_others 
+from AppInvoice ai 
+inner join school_class sc on sc.id = ai.schoolclass_id and sc.school_id = 1112 
+where ai.created_on < '2019-01-01 00:00:00 AM'
+group by ai.created_on

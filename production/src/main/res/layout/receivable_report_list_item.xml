@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/st_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_app_green"
+        android:layout_margin="@dimen/margin_small"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small">
+
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="@dimen/margin_small"
+            android:text="xxxxx"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_small"
+            android:visibility="gone"
+            android:text="xxxxx"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:text="xxxxx"
+            android:padding="@dimen/margin_small"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:text="xxxxx"
+            android:padding="@dimen/margin_small"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_receivable"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:text="xxxxx"
+            android:padding="@dimen/margin_small"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size" />
+
+    </LinearLayout>
+</LinearLayout>

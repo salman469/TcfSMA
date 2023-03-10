@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_small"
+    android:orientation="horizontal"
+    android:weightSum="1.4">
+
+    <TextView
+        android:id="@+id/name5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".3"
+        android:padding="@dimen/margin_small"
+        android:text="Badar Jamal"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/gr_No5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".2"
+        android:padding="@dimen/margin_small"
+        android:text="345"
+        android:gravity="left"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/class_section5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".25"
+        android:padding="@dimen/margin_small"
+        android:gravity="left"
+        android:text="1-Green"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/absent5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".25"
+        android:padding="@dimen/margin_small"
+        android:text="54"
+        android:gravity="left"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/contactNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".4"
+        android:padding="@dimen/margin_small"
+        android:text="03000000001"
+        android:textColor="@color/app_green"
+        android:textSize="@dimen/text_size" />
+
+</LinearLayout>

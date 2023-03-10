@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    android:nestedScrollingEnabled="true"
+    android:orientation="vertical"
+    tools:context=".Activities.FeesCollection.AccountStatement.AccountStatementActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/header_filter" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAccountStatement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card"
+            android:layout_margin="@dimen/margin_medium"
+            android:background="@drawable/textview_border_black"
+            android:requiresFadingEdge="vertical"
+            android:visibility="gone" />
+
+
+
+        <TextView
+            android:id="@+id/tvNoDataFound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rvAccountStatement"
+            android:layout_margin="@dimen/big_margin"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="No data found"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_big" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/tiny_margin"
+    android:layout_marginTop="@dimen/tiny_margin"
+    android:elevation="@dimen/card_elevation"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/light_blue_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_marginStart="@dimen/attendance_header_f_name_margin">
+
+
+                <TextView
+                    android:id="@+id/tv_empName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_heading"
+                    android:text="Asad Umer"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:id="@+id/tv_empCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/new_nav_footer_text_size"
+                    android:text="061258"/>
+
+                <TextView
+                    android:id="@+id/tv_empDesignation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/new_nav_footer_text_size"
+                    android:text="Principal"/>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:textAlignment="center"
+            android:layout_marginEnd="@dimen/margin_login_left">
+
+
+            <TextView
+                android:id="@+id/tv_resignType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/new_nav_footer_text_size"
+                android:textAlignment="center"
+                android:text="Resignation"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:textAlignment="center"
+            android:layout_marginEnd="@dimen/margin_login_left">
+
+
+            <TextView
+                android:id="@+id/tv_resignDate_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/new_nav_footer_text_size"
+                android:textAlignment="center"
+                android:text="Asad Umer"/>
+
+            <TextView
+                android:id="@+id/tv_lastWorkingDate_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/new_nav_footer_text_size"
+                android:textAlignment="center"
+                android:text="Asad Umer"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="end">
+
+            <Button
+                android:id="@+id/Btn_pending"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:background="@color/blue"
+                android:text="P"
+                android:textColor="@color/white_2"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/Btn_approved"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:background="@color/app_green"
+                android:text="A"
+                android:textColor="@color/white_2"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+
+            <Button
+                android:id="@+id/Btn_reject"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                android:text="R"
+                android:textColor="@color/white_2"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

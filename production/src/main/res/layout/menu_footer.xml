@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout_footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/colorBlack"
+    android:orientation="horizontal"
+    android:weightSum="5">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:background="#000000" />
+
+    <!--     <ImageButton
+            android:id="@+id/btnNewSurvey"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/play2"/>
+
+        <ImageButton
+            android:id="@+id/btnMap"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/record"/>
+
+        <ImageButton
+            android:id="@+id/btnValidation"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:lines="2"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/rr"/>
+
+        <ImageButton
+            android:id="@+id/btnOutlets"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:lines="2"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/pause"/>
+
+        <ImageButton
+            android:id="@+id/btnOffline"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:lines="2"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/offline"/>
+
+
+
+        <ImageButton
+            android:id="@+id/btnSignout"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:lines="2"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/cancel"/> -->
+
+
+</LinearLayout>    
+    
+

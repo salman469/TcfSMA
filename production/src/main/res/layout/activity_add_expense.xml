@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.Expense.AddExpense">
+
+    <RelativeLayout
+        android:id="@+id/inner_relativelayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/school_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_small">
+
+            <LinearLayout
+                android:id="@+id/headerSpinnerLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginStart="@dimen/new_admission_profile_top_margin"
+                android:layout_marginTop="@dimen/new_admission_header_school_spinner_margin_top"
+                android:background="@drawable/spinner_bg"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <Spinner
+                    android:id="@+id/spinner_SelectSchool"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    tools:listitem="@layout/new_spinner_layout"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/headerAreaLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/headerSpinnerLayout"
+                app:layout_constraintStart_toStartOf="@id/headerSpinnerLayout"
+                app:layout_constraintTop_toBottomOf="@+id/headerSpinnerLayout">
+
+                <TextView
+                    android:id="@+id/tv_areaName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:text="North West"
+                    android:textColor="@color/white_2"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/tv_regionName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:text="Nawshehra"
+                    android:textColor="@color/white_2"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/remaining_expensetype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        tools:layout_editor_absoluteX="221dp"
+        tools:layout_editor_absoluteY="75dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:background="@drawable/attendance_btn"
+            android:backgroundTint="@color/light_app_green"
+            app:cardCornerRadius="30dp">
+
+            <LinearLayout
+                android:layout_width="230dp"
+                android:layout_height="120dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_approvedResign"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/attendance_btn_inside_banner"
+                    android:backgroundTint="@color/darkGreen"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_expensetype_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="Rs. 2,500"
+                        android:textAlignment="center"
+                        android:textColor="@color/white_2"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_expensetype"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/student_dashboard_banner_margin"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:padding="@dimen/student_dashboard_banner_padding"
+                    android:text="PETTY CASH REMAINING"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </FrameLayout>
+
+
+
+    <RadioGroup
+        android:id="@+id/rg_expensetype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_gravity="center"
+        android:padding="@dimen/padding_small">
+
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_pettycash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_leftcurve_selector"
+            android:button="@android:color/transparent"
+            android:checked="true"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingStart="@dimen/paddingLarge"
+            android:paddingEnd="@dimen/paddingLarge"            android:text="Petty Cash"
+            android:textColor="@drawable/radio_flat_text_selector"
+            android:textSize="@dimen/text_size_heading" />
+
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_advance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_flattopbottomborder_selector"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingStart="@dimen/paddingLarge"
+            android:paddingEnd="@dimen/paddingLarge"            android:text="Advance"
+            android:textColor="@drawable/radio_flat_text_selector"
+            android:textSize="@dimen/text_size_heading" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_salary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_rightcurve_selector"
+            android:button="@android:color/transparent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingStart="@dimen/paddingLarge"
+            android:paddingEnd="@dimen/paddingLarge"            android:text="Salary"
+            android:textColor="@drawable/radio_flat_text_selector"
+            android:textSize="@dimen/text_size_heading" />
+    </RadioGroup>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                        android:id="@+id/mid_layout_pettycash"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_small">
+
+                    <RadioGroup
+                        android:id="@+id/rg_cash"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:layout_marginEnd="@dimen/margin_medium"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:padding="@dimen/padding_small">
+
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/rb_cashinhand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/radio_leftcurvewithoutrightborder_selector"
+                            android:button="@android:color/transparent"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/padding_small"
+                            android:paddingBottom="@dimen/padding_small"
+                            android:paddingStart="@dimen/paddingLarge"
+                            android:paddingEnd="@dimen/paddingLarge"
+                            android:text="from cash in hand"
+                            android:textColor="@drawable/radio_flat_text_selector"
+                            android:textSize="@dimen/text_size_heading" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/rb_bank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/radio_rightcurve_selector"
+                            android:button="@android:color/transparent"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/padding_small"
+                            android:paddingBottom="@dimen/padding_small"
+                            android:paddingStart="@dimen/paddingLarge"
+                            android:paddingEnd="@dimen/paddingLarge"                        android:text="from bank"
+                            android:textColor="@drawable/radio_flat_text_selector"
+                            android:textSize="@dimen/text_size_heading" />
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:id="@+id/ll_expensehead_sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="gone"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Expense head"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <Spinner
+                                    android:id="@+id/sp_expensehead"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.25"
+                                    android:spinnerMode="dialog"
+                                    android:visibility="visible" />
+
+                            </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_employee_sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:layout_weight="1"
+                                android:padding="@dimen/padding_small"
+                                android:text="Employee"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="16sp" />
+
+                            <Spinner
+                                android:id="@+id/sp_employee"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.25"
+                                android:spinnerMode="dialog"
+                                android:visibility="visible" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_expenseDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/expenseDatelabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/padding_small"
+                                android:text="Expense Date"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/txt_ExpenseDate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.25"
+                                android:textColor="@color/black"
+                                android:background="@drawable/edittext_border"
+                                android:drawableRight="@drawable/calendar"
+                                android:padding="@dimen/padding_small"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_employee_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:layout_weight="1"
+                                android:padding="@dimen/padding_small"
+                                android:text="Employee Code: "
+                                android:textColor="@color/colorBlack"
+                                android:textSize="16sp" />
+
+                            <Spinner
+                                android:id="@+id/sp_employeecode"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.25"
+                                android:spinnerMode="dialog"
+                                android:visibility="visible" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                                android:id="@+id/ll_jvno"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="gone"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="J.V. #"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/tv_jvno"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1.25"
+                                    android:padding="@dimen/padding_small"
+                                    android:maxLength="7"
+                                    android:inputType="number"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="gone"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Amount"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/tv_amount"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1.25"
+                                    android:inputType="number"
+                                    android:padding="@dimen/padding_small"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_balance_advance"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="gone"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Balance"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_balance"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1.25"
+                                    android:padding="@dimen/padding_small"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_lastclosing_advance"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="gone"
+                                android:orientation="horizontal"
+                                android:layout_weight="1">
+
+                                <RadioButton
+                                    android:id="@+id/rb_duplicate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Last/Closing Payment"
+                                    android:textColor="@color/black"/>
+
+
+                            </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_Attachments_sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:layout_weight="1"
+                                android:padding="@dimen/padding_small"
+                                android:text="Attachments"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="16sp" />
+
+                            <Spinner
+                                android:id="@+id/sp_attachments"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.25"
+                                android:spinnerMode="dialog"
+                                android:visibility="visible" />
+
+                        </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llcheckno"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="gone"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Check #"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/tv_checkno"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:inputType="number"
+                                    android:layout_weight="1.25"
+                                    android:padding="@dimen/padding_small"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/llcheckimagesfield"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Check Images"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_addcheckimage"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/darkGreen"
+                                        android:gravity="center_vertical"
+                                        android:visibility="visible"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_margin="@dimen/tiny_margin">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:id="@+id/iv_addcheckimage"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:maxWidth="@dimen/camera_width"
+                                            android:padding="7dp"
+                                            android:scaleType="fitCenter"
+                                            app:srcCompat="@drawable/add_box_green" />
+
+                                    </RelativeLayout>
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_checkimage"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/darkGreen"
+                                        android:gravity="center_vertical"
+                                        android:visibility="gone"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_margin="@dimen/tiny_margin">
+
+                                        <ImageView
+                                            android:id="@+id/iv_delete"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/close"
+                                            android:layout_alignRight="@+id/ivcheckimage"
+                                            android:layout_marginTop="@dimen/tiny_margin"
+                                            android:layout_marginEnd="@dimen/tiny_margin"
+                                            android:translationZ="180dp"/>
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:id="@+id/ivcheckimage"
+                                            android:layout_width="200dp"
+                                            android:layout_height="150dp"
+                                            android:layout_gravity="center"
+                                            android:padding="7dp"
+                                            android:scaleType="fitXY"
+                                            android:adjustViewBounds="true"
+                                            />
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_checkimages"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/student_dashboard_assc_margin_top"
+                                android:layout_marginBottom="@dimen/student_dashboard_assc_margin_top"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                >
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv_checkimages"
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    tools:listitem="@layout/custom_attachment_view"
+                                    android:layout_height="wrap_content"/>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_receipt_heading"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                >
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Receipt Images"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_receipt_images"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/student_dashboard_assc_margin_top"
+                                android:layout_marginBottom="@dimen/student_dashboard_assc_margin_top"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                >
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv_receipt_images"
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    tools:listitem="@layout/custom_attachment_view"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    style="@style/ButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:text="Submit" />
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+</LinearLayout>

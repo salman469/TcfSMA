@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:layout_marginBottom="15dp">
+
+    <ImageButton
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@android:drawable/ic_delete" />
+
+    <RelativeLayout
+        android:id="@+id/listLayout_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/text_lastQuest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Last Saved Question No. 2" />
+
+        <TextView
+            android:id="@+id/text_lastAns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_lastQuest"
+            android:layout_alignParentLeft="true"
+            android:text="Answer: abc shop" />
+
+        <TextView
+            android:id="@+id/text_lastDated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_lastAns"
+            android:layout_alignParentLeft="true"
+            android:text="On: 08-09-2014" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/st_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_small"
+    android:layout_marginTop="@dimen/margin_small"
+    android:layout_marginRight="@dimen/margin_small"
+    android:layout_marginBottom="@dimen/margin_small"
+    android:elevation="@dimen/card_elevation">
+
+    <LinearLayout
+        android:weightSum="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small">
+
+        <TextView
+            android:layout_weight="0.8"
+            android:id="@+id/tv_student_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxEms="1"
+            android:gravity="start"
+            android:text="666"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:layout_weight="0.8"
+            android:id="@+id/gr_No"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxEms="1"
+            android:gravity="center"
+            android:text="1234"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_name_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxEms="2"
+            android:text="Zubair Soomro"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size" />
+
+        <EditText
+            android:layout_weight="1.4"
+            android:id="@+id/et_student_monthlyfee"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btnSyncHeight"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            android:background="@drawable/textview_border_transparent"
+            android:digits="0123456789"
+            android:gravity="start"
+            android:inputType="none"
+            android:ems="4"
+            android:enabled="false"
+            android:maxLength="4"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size" />
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/et_op_fee"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btnSyncHeight"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            android:background="@drawable/textview_border_black"
+            android:gravity="start"
+            android:inputType="numberSigned"
+            android:maxEms="2"
+            android:maxLength="5"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size" />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

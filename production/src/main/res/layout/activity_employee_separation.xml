@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnsLayout"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_small"
+                        android:text="Name"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/txt_ResName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.25"
+                        android:hint="Name"
+                        android:padding="@dimen/padding_small"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_small"
+                        android:text="Emp.Code"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txt_ResEmCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_weight="1.25"
+                        android:hint="Emp.Code"
+                        android:padding="@dimen/padding_small"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_small"
+                        android:text="Separation Type"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight="1.25"
+                        android:gravity="center_vertical">
+
+                        <Spinner
+                            android:id="@+id/spin_sepType"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dialog" />
+
+                        <TextView
+                            android:id="@+id/et_SepType"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/edittext_border"
+                            android:padding="@dimen/tiny_margin"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <RadioGroup
+                    android:id="@+id/rg_separationType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/radio_flat_selector"
+                    android:layout_gravity="center"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rb_resignation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_small"
+                        android:background="@drawable/radio_flat_selector"
+                        android:text="Resignation"
+                        android:textSize="@dimen/text_size"
+                        android:gravity="center"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:textColor="@drawable/radio_flat_text_selector"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rb_termination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_small"
+                        android:background="@drawable/radio_flat_selector"
+                        android:text="Termination"
+                        android:textSize="@dimen/text_size"
+                        android:gravity="center"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:textColor="@drawable/radio_flat_text_selector"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rb_expired"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_small"
+                        android:background="@drawable/radio_flat_selector"
+                        android:text="Death"
+                        android:textSize="@dimen/text_size"
+                        android:gravity="center"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:textColor="@drawable/radio_flat_text_selector"
+                        />
+
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/next_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/padding_small"
+                            android:text="Reason"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:id="@+id/l2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.25"
+                            android:orientation="horizontal"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center_vertical">
+
+                            <Spinner
+                                android:id="@+id/spin_ResReason"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:spinnerMode="dialog" />
+
+                            <TextView
+                                android:id="@+id/et_ResReason"
+                                android:layout_width="match_parent"
+                                android:padding="@dimen/tiny_margin"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/subReasonLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/padding_small"
+                            android:text="Sub Reason"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_subReason"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.25"
+                            android:orientation="horizontal"
+                            android:background="@drawable/edittext_border"
+                            android:gravity="center_vertical">
+
+                            <Spinner
+                                android:id="@+id/spin_ResSubReason"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:spinnerMode="dialog" />
+
+
+                            <EditText
+                                android:id="@+id/et_ResSubReason"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:maxLength="256"
+                                android:inputType="text"
+                                android:visibility="gone"
+                                android:focusableInTouchMode="true"
+                                android:focusable="true"
+                                android:textColor="@color/black"
+                                android:background="@drawable/edittext_border"
+                                android:padding="@dimen/padding_small"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_resignDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/separationLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_weight="1"
+                            android:padding="@dimen/padding_small"
+                            android:text="Resignation Date"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/txt_ResDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.25"
+                            android:textColor="@color/black"
+                            android:background="@drawable/edittext_border"
+                            android:drawableRight="@drawable/calendar"
+                            android:padding="@dimen/padding_small"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/lwdLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/padding_small"
+                            android:text="Last Working Date"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/txt_ResStartDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.25"
+                            android:textColor="@color/black"
+                            android:background="@drawable/edittext_border"
+                            android:drawableRight="@drawable/calendar"
+                            android:padding="@dimen/padding_small"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/padding_small"
+                            android:text="Leave Without Pay\n(Working Days)"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/et_leaveWithoutPay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:focusableInTouchMode="true"
+                            android:focusable="true"
+                            android:layout_weight="1.25"
+                            android:textColor="@color/black"
+                            android:background="@drawable/edittext_border"
+                            android:padding="@dimen/padding_small"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_total_lwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_weight="1"
+                            android:padding="@dimen/padding_small"
+                            android:text="Working Days Remaining"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/txt_Total_WDays"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1.25"
+                            android:padding="@dimen/padding_small"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_total_days"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_weight="1"
+                            android:padding="@dimen/padding_small"
+                            android:text="Total Days Remaining"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/txt_Total_Days"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_weight="1.25"
+                            android:padding="@dimen/padding_small"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:padding="@dimen/padding_small"
+                        android:text="Separation Attachments"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/noAttachmentsFound"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/padding_small"
+                        android:text="No Attachments Found"
+                        android:textColor="@color/darkGreen"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_attachments"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        tools:listitem="@layout/custom_attachment_view"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/btnsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/Update_Delete_Buttons"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Resign_Update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/tiny_margin"
+                    android:background="@color/app_green"
+                    android:text="Update"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/Resign_Delete"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/tiny_margin"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/app_green"
+                    android:text="Cancel Resignation"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_Resign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:background="@color/app_green"
+                android:text="Separation"
+                android:layout_above="@id/btn_close"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/tiny_margin"
+                android:text="Back"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

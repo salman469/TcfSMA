@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@color/light_gray"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small">
+
+        <LinearLayout
+            android:id="@+id/ll_receipt_no"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_small">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Receipt No"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_receipt_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_4dp"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_school_id"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:padding="@dimen/padding_small">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="School Id"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_school_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_4dp"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_gr_no"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_small">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gr No"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_gr_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_4dp"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_depositSlip_no"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_small">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Deposit Slip No"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_depositSlip_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_4dp"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_totalAmount"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_small">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Amount"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_totalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_4dp"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_created_by"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_small">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Created By"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_created_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_4dp"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_created_on"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_small">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Created On"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_created_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_4dp"
+                android:src="@android:drawable/arrow_down_float" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

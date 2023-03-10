@@ -1,0 +1,527 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_new_admission"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#0a713a"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/top_curved_view_white" />
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/inner_relativelayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_curve"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nav_header_vertical_spacing"
+                    android:background="#0a713a"
+                    android:layout_alignParentTop="true"
+                    android:layout_above="@+id/profile_image_layout"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/top_curved_view_white" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/profile_image_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    tools:layout_editor_absoluteX="221dp"
+                    tools:layout_editor_absoluteY="75dp">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginEnd="@dimen/margin_medium"
+                        android:layout_marginBottom="@dimen/margin_medium"
+                        android:background="@drawable/attendance_btn"
+                        android:backgroundTint="@color/light_app_green"
+                        app:cardCornerRadius="30dp">
+
+                        <LinearLayout
+                            android:layout_width="250dp"
+                            android:layout_height="150dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_approvedResign"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:background="@drawable/attendance_btn_inside_banner"
+                                android:backgroundTint="@color/darkGreen"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/tv_approvedResignation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:gravity="center"
+                                    android:lines="1"
+                                    android:text="Rs. 40000"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white_2"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="@dimen/student_dashboard_banner_margin"
+                                android:layout_marginEnd="40dp"
+                                android:autoSizeTextType="uniform"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:padding="@dimen/student_dashboard_banner_padding"
+                                android:text="SALARY REMAINING"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profile_image_layout"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_small">
+
+                    <LinearLayout
+                        android:id="@+id/mid_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:layout_marginEnd="@dimen/margin_medium"
+                        android:background="@drawable/attendance_btn"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="J.V. #"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/tv_jvno"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1.25"
+                                    android:padding="@dimen/padding_small"
+                                    android:textSize="18sp"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="visible"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="School"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/tv_schoolname"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1.25"
+                                    android:padding="@dimen/padding_small"
+                                    android:textSize="18sp"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"/>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Head:"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/tv_head"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1.25"
+                                    android:padding="@dimen/padding_small"
+                                    android:textSize="18sp"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Sub Head:"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_subhead"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1.25"
+                                    android:padding="@dimen/padding_small"
+                                    android:textSize="18sp"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Employee:"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_employeename"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1.25"
+                                    android:padding="@dimen/padding_small"
+                                    android:textSize="18sp"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Employee Code:"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_employeecode"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1.25"
+                                    android:padding="@dimen/padding_small"
+                                    android:textSize="18sp"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Transaction Type:"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_transactiontype"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1.25"
+                                    android:padding="@dimen/padding_small"
+                                    android:textSize="18sp"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Bucket:"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/tv_bucket"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1.25"
+                                    android:padding="@dimen/padding_small"
+                                    android:textSize="18sp"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="In/Out:"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/tv_inout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1.25"
+                                    android:padding="@dimen/padding_small"
+                                    android:textSize="18sp"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"/>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Amount"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/tv_amount"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1.25"
+                                    android:padding="@dimen/padding_small"
+                                    android:textSize="18sp"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"/>
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Check #"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/tv_checkno"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1.25"
+                                    android:padding="@dimen/padding_small"
+                                    android:textSize="18sp"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"/>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_small"
+                                    android:text="Check Image"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iv_addcheckimage"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:maxWidth="@dimen/camera_width"
+                                android:padding="7dp"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/dummy_check" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

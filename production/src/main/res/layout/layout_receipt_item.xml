@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="5.5">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:background="@drawable/textview_border_gray"
+        android:gravity="left"
+        android:padding="@dimen/padding_small"
+        android:text="Fees Name"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_receipt_size" />
+
+
+    <EditText
+        android:id="@+id/et_prevRecv"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/textview_border_gray"
+        android:enabled="false"
+        android:gravity="right"
+        android:inputType="none"
+        android:maxLength="5"
+        android:padding="@dimen/padding_small"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_receipt_size" />
+
+    <EditText
+        android:id="@+id/et_todaySales"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/textview_border_black"
+        android:digits="0123456789"
+        android:gravity="right"
+        android:inputType="number"
+        android:maxLength="5"
+        android:padding="@dimen/padding_small"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_receipt_size" />
+
+    <EditText
+        android:id="@+id/et_amountRecv"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/textview_border_black"
+        android:digits="0123456789"
+        android:gravity="right"
+        android:inputType="number"
+        android:maxLength="5"
+        android:padding="@dimen/padding_small"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_receipt_size" />
+
+    <EditText
+        android:id="@+id/et_amountBalance"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/textview_border_gray"
+        android:enabled="false"
+        android:gravity="right"
+        android:inputType="none"
+        android:maxLength="5"
+        android:padding="@dimen/padding_small"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_receipt_size" />
+
+</LinearLayout>

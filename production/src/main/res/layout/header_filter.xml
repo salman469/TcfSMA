@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:padding="@dimen/padding_small"
+        app:cardBackgroundColor="@color/white_color"
+        app:cardCornerRadius="@dimen/cardview_default_radius">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_small">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:text="Select School:"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_border">
+
+                <Spinner
+                    android:id="@+id/spnSchools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card1"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        app:cardBackgroundColor="@color/white_color"
+        app:cardCornerRadius="@dimen/cardview_default_radius">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--Date range-->
+            <LinearLayout
+                android:id="@+id/llDateRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_small"
+                        android:text="From:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:id="@+id/etFromDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textview_border_black"
+                        android:minWidth="@dimen/minWidth"
+                        android:padding="@dimen/padding_small"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:padding="@dimen/padding_small"
+                        android:text="To:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:id="@+id/etToDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textview_border_black"
+                        android:minWidth="@dimen/minWidth"
+                        android:padding="@dimen/padding_small"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llGrNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_small">
+
+                <TextView
+                    android:id="@+id/tv_GRNO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:text="Student (Name / Gr No):"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/et_grNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".9"
+                        android:background="@drawable/textview_border_black"
+                        android:clickable="true"
+                        android:imeOptions="actionSearch"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:minWidth="@dimen/minWidth"
+                        android:padding="@dimen/padding_small"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/et_std_name_grNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".9"
+                        android:background="@drawable/textview_border_black"
+                        android:clickable="true"
+                        android:digits="abcdefghijklmnopqrstuvwxyz 0123456789"
+                        android:completionThreshold="1"
+                        android:imeOptions="actionSearch"
+                        android:inputType="textAutoComplete|textAutoCorrect"
+                        android:minWidth="@dimen/minWidth"
+                        android:padding="@dimen/padding_small"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_search"
+                        android:layout_width="@dimen/imageViewWidth"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:layout_weight=".1"
+                        android:background="@color/light_app_green"
+                        android:clickable="true"
+                        android:src="@drawable/ic_search"
+                        android:tint="@color/app_green"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_small"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_medium"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_large" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llStudentInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_small"
+                        android:text="Name:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_small"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_small"
+                        android:text="Father's Name:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_fathersName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_small"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_small"
+                        android:text="Section Name:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_sectionName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_small"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_small"
+                        android:text="Class:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_className"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_small"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_depositAndReceiptNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/llDep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_small">
+
+                    <TextView
+                        android:id="@+id/tv_depSlipNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:paddingTop="@dimen/padding_small"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:text="Deposit Slip No:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_depSlipNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textview_border_black"
+                            android:clickable="true"
+                            android:inputType="number"
+                            android:minWidth="@dimen/minWidth"
+                            android:padding="@dimen/padding_small"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llReceipt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_small">
+
+                    <TextView
+                        android:id="@+id/tv_receiptNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:paddingTop="@dimen/padding_small"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:text="Receipt No:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_receiptNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textview_border_black"
+                            android:clickable="true"
+                            android:inputType="number"
+                            android:minWidth="@dimen/minWidth"
+                            android:padding="@dimen/padding_small"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/llReceipt"
+                    android:layout_weight=".2"
+                    android:padding="@dimen/padding_small">
+
+                    <ImageView
+                        android:id="@+id/iv_search_depositNo_and_receiptNo"
+                        android:layout_width="@dimen/imageViewWidth"
+                        android:layout_height="@dimen/imageViewWidth"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:background="@color/light_app_green"
+                        android:clickable="true"
+                        android:src="@drawable/ic_search"
+                        android:tint="@color/app_green" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+

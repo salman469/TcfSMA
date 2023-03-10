@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="Opening Cash in Hand"
+            android:background="@drawable/textview_border_black"
+            android:padding="@dimen/padding_small"
+            android:textSize="@dimen/text_receipt_size"
+            android:textColor="@color/grayheadingsdb"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Cash Received"
+            android:background="@drawable/textview_border_black"
+            android:padding="@dimen/padding_small"
+            android:gravity="center"
+            android:textSize="@dimen/text_receipt_size"
+            android:textColor="@color/grayheadingsdb"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Cash Deposit"
+            android:background="@drawable/textview_border_black"
+            android:padding="@dimen/padding_small"
+            android:gravity="center"
+            android:textSize="@dimen/text_receipt_size"
+            android:textColor="@color/grayheadingsdb"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Closing Cash in Hand"
+            android:background="@drawable/textview_border_black"
+            android:padding="@dimen/padding_small"
+            android:gravity="center"
+            android:textSize="@dimen/text_receipt_size"
+            android:textColor="@color/grayheadingsdb"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_Op_cashInHand"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:background="@drawable/textview_border_black"
+            android:padding="@dimen/padding_small"
+            android:textSize="@dimen/text_receipt_size"
+            android:textColor="@color/grayheadingsdb"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_CashReceived"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/textview_border_black"
+            android:padding="@dimen/padding_small"
+            android:gravity="center"
+            android:textSize="@dimen/text_receipt_size"
+            android:textColor="@color/grayheadingsdb"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_CashDeposit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/textview_border_black"
+            android:padding="@dimen/padding_small"
+            android:gravity="center"
+            android:textSize="@dimen/text_receipt_size"
+            android:textColor="@color/grayheadingsdb"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_Cl_cashInHand"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/textview_border_black"
+            android:padding="@dimen/padding_small"
+            android:gravity="center"
+            android:textSize="@dimen/text_receipt_size"
+            android:textColor="@color/grayheadingsdb"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.HR.Approval_Dashboard_Listing">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="School"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_border"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_small">
+
+                <Spinner
+                    android:id="@+id/spinner_SelectSchool"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <RadioGroup
+            android:id="@+id/rg_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/padding"
+            android:gravity="center"
+            android:background="@drawable/radio_flat_selector"
+            android:layout_gravity="center"
+            >
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rb_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_small"
+                android:background="@drawable/radio_flat_selector"
+                android:text="All"
+                android:checked="true"
+                android:textSize="@dimen/text_size"
+                android:gravity="center"
+                android:button="@android:color/transparent"
+                android:paddingLeft="16dp"
+                android:paddingTop="3dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="3dp"
+                android:textColor="@drawable/radio_flat_text_selector"
+                />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rb_pending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_small"
+                android:background="@drawable/radio_flat_selector"
+                android:text="Pending"
+                android:textSize="@dimen/text_size"
+                android:gravity="center"
+                android:button="@android:color/transparent"
+                android:paddingLeft="16dp"
+                android:paddingTop="3dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="3dp"
+                android:textColor="@drawable/radio_flat_text_selector"
+                />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rb_rejected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_small"
+                android:background="@drawable/radio_flat_selector"
+                android:text="Rejected"
+                android:textSize="@dimen/text_size"
+                android:gravity="center"
+                android:button="@android:color/transparent"
+                android:paddingLeft="16dp"
+                android:paddingTop="3dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="3dp"
+                android:textColor="@drawable/radio_flat_text_selector"
+                />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rb_approved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_small"
+                android:background="@drawable/radio_flat_selector"
+                android:text="Approved"
+                android:textSize="@dimen/text_size"
+                android:gravity="center"
+                android:button="@android:color/transparent"
+                android:paddingLeft="16dp"
+                android:paddingTop="3dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="3dp"
+                android:textColor="@drawable/radio_flat_text_selector"
+                />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rb_cancelled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_small"
+                android:background="@drawable/radio_flat_selector"
+                android:text="Cancelled"
+                android:textSize="@dimen/text_size"
+                android:gravity="center"
+                android:button="@android:color/transparent"
+                android:paddingLeft="16dp"
+                android:paddingTop="3dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="3dp"
+                android:textColor="@drawable/radio_flat_text_selector"
+                />
+
+
+        </RadioGroup>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                android:id="@+id/et_std_name_grNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:background="@drawable/textview_border_black"
+                android:digits="abcdefghijklmnopqrstuvwxyz 0123456789"
+                android:hint="Employee Code/ Employee Name"
+                android:completionThreshold="1"
+                android:imeOptions="actionSearch"
+                android:inputType="textAutoComplete|textAutoCorrect"
+                android:minWidth="@dimen/minWidth"
+                android:padding="@dimen/padding"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/close"
+                android:padding="@dimen/padding" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btn_Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:background="@color/app_green"
+            android:text="Search"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_total"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tinnny_margin"
+            android:background="@color/app_green"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding">
+
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Students: "
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_resigns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

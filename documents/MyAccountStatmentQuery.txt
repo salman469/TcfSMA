@@ -1,0 +1,16 @@
+ select s.student_name as student_name,s.father_name as father_name,c.name as className,sec.name as sectionName,ar.id as id,ar.sys_id as sys_id, ar.schoolclass_id as schoolclass_id, ar.school_year_id as school_year_id, ar.student_id as student_id, 'R' as transaction_type, cast(ar.is_correction as text)as created_from, ar.created_on as created_on,(ar.fees_admission *-1) as fees_admission , (ar.fees_exam*-1) as fees_exam, (ar.fees_tution*-1) as fees_tution, (ar.fees_books*-1) as fees_books, (ar.fees_copies*-1) as fees_copies, (ar.fees_uniform*-1) as fees_uniform,(ar.fees_others*-1) as fees_others,cd.deposit_slip_no as deposit_slip_no,ar.receipt_no as receipt_no,cd.created_on as deposit_date 
+ from AppReceipt ar 
+ left outer join CashDeposit cd on ar.cashdeposit_id = cd.id 
+ inner join school_class sc on sc.id = ar.schoolclass_id and sc.school_id = 1112 
+ inner join class c on c.id = sc.class_id 
+ inner join section sec on sec.id = sc.section_id 
+ inner join student s on s.id =ar.student_id and s.student_gr_no = 1109 
+ where ar.created_on between '2019-01-01 00:00:00 AM' and '2019-01-07 23:59:59 PM' 
+ union 
+ select s.student_name as student_name,s.father_name as father_name,c.name as className,sec.name as sectionName,ai.id as id,ai.sys_id as sys_id, ai.schoolclass_id as schoolclass_id, ai.school_year_id as school_year_id, ai.student_id as student_id, 'I' as transaction_type, ai.created_from as created_from, ai.created_on as created_on,ai.fees_admission, ai.fees_exam, ai.fees_tution, ai.fees_books, ai.fees_copies, ai.fees_uniform as fees_uniform,ai.fees_others ,null as deposit_slip_no,null as receipt_no,null as deposit_date 
+ from AppInvoice ai 
+ inner join school_class sc on sc.id = ai.schoolclass_id and sc.school_id = 1112 
+ inner join class c on c.id = sc.class_id 
+ inner join section sec on sec.id = sc.section_id
+ inner join student s on s.id =ai.student_id and s.student_gr_no = 1109 
+ where ai.created_on between '2019-01-01 00:00:00 AM' and '2019-01-07 23:59:59 PM'

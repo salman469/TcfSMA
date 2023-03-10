@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/margin_small"
+    android:layout_marginRight="@dimen/margin_small"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/activity_student_strength_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/element_margin"
+            android:gravity="center"
+            android:text="Student Strength Validation"
+            android:textColor="@color/app_green"
+            android:textSize="@dimen/text_large" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/element_margin"
+            android:layout_marginRight="@dimen/element_margin"
+            android:layout_marginTop="@dimen/element_margin"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tv_visiting_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/element_margin"
+                android:layout_weight=".4"
+                android:text="Visiting Date"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_visting_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_visiting_date"
+                android:layout_weight=".6"
+                android:hint="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/element_margin"
+            android:layout_marginRight="@dimen/element_margin"
+            android:layout_marginTop="@dimen/element_margin"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/element_margin"
+                android:layout_weight=".4"
+                android:text="Enrollment Status"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEnrollmentStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_visiting_date"
+                android:layout_weight=".6"
+                android:hint="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/element_margin"
+            android:layout_marginRight="@dimen/element_margin"
+            android:layout_marginTop="@dimen/element_margin"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/element_margin"
+                android:layout_weight=".4"
+                android:text="Remarks"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvRemarks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_visiting_date"
+                android:layout_weight=".6"
+                android:hint="" />
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/sll"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingBottom="@dimen/padding_small"-->
+        <!--android:paddingTop="@dimen/padding_small"-->
+        <!--android:weightSum="1">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tt1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="@dimen/element_margin"-->
+        <!--android:layout_weight=".5"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:text="Enrollment Status"-->
+        <!--android:textSize="@dimen/text_size"-->
+        <!--android:textStyle="bold" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tt2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/big_margin"-->
+        <!--android:layout_weight=".5"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:text="Approved/Not Approved"-->
+        <!--android:textSize="@dimen/text_size"-->
+        <!--android:textStyle="bold" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/rv_principal_strength"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--</android.support.v7.widget.RecyclerView>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/activity_student_strength_report"
+        android:layout_marginTop="@dimen/element_margin"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_remarks"-->
+            <!--style="@style/ButtonStyle"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_marginEnd="@dimen/tiny_margin"-->
+            <!--android:layout_weight="0.5"-->
+            <!--android:gravity="center"-->
+            <!--android:text="Remarks" />-->
+
+        <Button
+            android:id="@+id/btn_"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="@dimen/tiny_margin"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="Approved"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>

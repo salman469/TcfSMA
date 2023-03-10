@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:elevation="@dimen/card_elevation">
+
+    <LinearLayout
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small">
+
+        <TextView
+            android:id="@+id/tv_empCode"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:text="Ali Asghar"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_empName"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:text="Ali Asghar"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_empCadre"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_empDesignation"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_startDate"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:text="01/12/2019"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_endDate"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:text="1/1/2010"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:text="Pending"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_empLeaveReason"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:text="Pending"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_empLeaveDays"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:text="Pending"
+            android:textSize="@dimen/text_size" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

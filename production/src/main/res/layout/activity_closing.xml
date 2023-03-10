@@ -1,0 +1,367 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_new_admission"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:id="@+id/inner_relativelayout1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/inner_relativelayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/school_bar">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_small">
+
+                        <LinearLayout
+                            android:id="@+id/headerSpinnerLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="@dimen/new_admission_profile_top_margin"
+                            android:layout_marginTop="@dimen/new_admission_header_school_spinner_margin_top"
+                            android:background="@drawable/spinner_bg"
+                            android:gravity="end"
+                            android:orientation="vertical"
+                            android:padding="@dimen/padding_small"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <Spinner
+                                android:id="@+id/spinner_SelectSchool"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                tools:listitem="@layout/new_spinner_layout"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/headerAreaLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="@id/headerSpinnerLayout"
+                            app:layout_constraintStart_toStartOf="@id/headerSpinnerLayout"
+                            app:layout_constraintTop_toBottomOf="@+id/headerSpinnerLayout">
+
+                            <TextView
+                                android:id="@+id/tv_areaName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_medium"
+                                android:text="North West"
+                                android:textColor="@color/white_2"
+                                android:textSize="@dimen/text_size" />
+
+                            <TextView
+                                android:id="@+id/tv_regionName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_medium"
+                                android:text="Nawshehra"
+                                android:textColor="@color/white_2"
+                                android:textSize="@dimen/text_size" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/new_admission_profile_bg_height"
+                    android:layout_below="@+id/inner_relativelayout2"
+                    android:background="#0a713a"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/top_curved_view_white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/attendance_btn"
+                    android:layout_margin="16dp"
+                    android:padding="8dp"
+                    android:layout_below="@+id/inner_relativelayout2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_big"
+                        android:textColor="@color/darkGreen"
+                        android:text="Patty Cash Closing"/>
+
+                    <TextView
+                        android:id="@+id/tv_limitAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textColor="@color/black"
+                        android:text="Amount for Expense = Rs. 15,000/-"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_heading"
+                                android:layout_weight="1"
+                                android:text="Closing Date:"/>
+
+                            <TextView
+                                android:id="@+id/txt_closing_date"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/text_size_heading"
+                                android:textStyle="bold"
+                                android:gravity="right"
+                                android:text=""/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/text_size_heading"
+                                android:textColor="@color/black"
+                                android:text="Total Patty Cash Expenses:"/>
+
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_closing"
+                            android:layout_width="match_parent"
+                            tools:listitem="@layout/expense_closing_item"
+                            android:layout_height="wrap_content">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:textSize="@dimen/text_size_heading"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:text="Generator Maintainance:"/>-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:textSize="@dimen/text_size_heading"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:gravity="right"-->
+<!--                                android:text="Rs. 2500"/>-->
+
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:textSize="@dimen/text_size_heading"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:text="Gas Bill:"/>-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:textSize="@dimen/text_size_heading"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:gravity="right"-->
+<!--                                android:text="Rs. 1050"/>-->
+
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:textSize="@dimen/text_size_heading"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:text="School Lunch:"/>-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:textSize="@dimen/text_size_heading"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:gravity="right"-->
+<!--                                android:text="Rs. 2500"/>-->
+
+<!--                        </LinearLayout>-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/text_size_heading"
+                                android:textColor="@color/black"
+                                android:layout_weight="1"
+                                android:text="Total Expense:"/>
+
+                            <TextView
+                                android:id="@+id/totalExpense"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/text_size_heading"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:gravity="right"
+                                android:text="Rs. 13,550"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_remaining"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textColor="@color/black"
+                        android:text="Amount for Expense Remaining = Rs. 1,450/-"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comments"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_heading" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:minLines="3"
+                    android:maxLines="3"
+                    android:background="@drawable/attendance_btn"
+                    android:padding="@dimen/padding"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@color/gray" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/tiny_margin"
+        android:onClick="alertdialogOnSubmit"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/tiny_margin"
+        android:text="Back"
+        android:onClick="goBack"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

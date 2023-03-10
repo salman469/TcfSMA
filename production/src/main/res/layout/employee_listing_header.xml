@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_small"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/light_gray">
+
+
+        <LinearLayout
+            android:id="@+id/ll_empCode"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_small">
+
+            <TextView
+                android:id="@+id/txt_EC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Emp Code"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_empCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_empName"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_small">
+
+            <TextView
+                android:id="@+id/txt_N"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Emp Name"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_empName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_empJD"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_small">
+
+            <TextView
+                android:id="@+id/txt_JD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Joining Date"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/iv_empJD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_empCadre"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_small">
+
+            <TextView
+                android:id="@+id/txt_C"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Cadre"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/iv_empCadre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_empDes"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_small">
+
+            <TextView
+                android:id="@+id/txt_D"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Designation"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/iv_empDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_empStatus"
+            android:layout_width="@dimen/minWidth"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_small">
+
+            <TextView
+                android:id="@+id/txt_S"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Status"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_empStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_empLWD"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_small">
+
+            <TextView
+                android:id="@+id/txt_APLLWD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/text_size"
+                android:text="Last Working Day"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_empLWD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    android:focusableInTouchMode="true"
+    android:nestedScrollingEnabled="true"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            android:padding="@dimen/padding_small"
+            app:cardBackgroundColor="@color/white_color"
+            app:cardCornerRadius="@dimen/cardview_default_radius">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_small">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_small"
+                    android:text="Select School:"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_border">
+
+                    <Spinner
+                        android:id="@+id/sp_schools"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            app:cardBackgroundColor="@color/white_color"
+            app:cardCornerRadius="@dimen/cardview_default_radius">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_small">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/et_std_name_grNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".9"
+                        android:background="@drawable/textview_border_black"
+                        android:digits="abcdefghijklmnopqrstuvwxyz 0123456789"
+                        android:hint="Gr No./Student Name"
+                        android:completionThreshold="1"
+                        android:imeOptions="actionSearch"
+                        android:inputType="textAutoComplete|textAutoCorrect"
+                        android:minWidth="@dimen/minWidth"
+                        android:padding="@dimen/padding"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutStudentId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/padding_small"
+                            android:paddingRight="@dimen/padding_small"
+                            android:visibility="gone"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:paddingTop="@dimen/padding_small"
+                                android:paddingRight="@dimen/padding_small"
+                                android:text="Student Id:"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size" />
+
+                            <TextView
+                                android:id="@+id/tv_student_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutGR"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/padding_small"
+                            android:paddingRight="@dimen/padding_small"
+                            android:visibility="gone"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:paddingTop="@dimen/padding_small"
+                                android:paddingRight="@dimen/padding_small"
+                                android:text="Gr No:"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size" />
+
+                            <TextView
+                                android:id="@+id/tv_gr"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/padding_small"
+                            android:paddingRight="@dimen/padding_small"
+                            android:visibility="gone"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:paddingTop="@dimen/padding_small"
+                                android:paddingRight="@dimen/padding_small"
+                                android:text="Name:"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size" />
+
+                            <TextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:text="Name"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutFName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/padding_small"
+                            android:paddingRight="@dimen/padding_small"
+                            android:visibility="gone"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:paddingTop="@dimen/padding_small"
+                                android:paddingRight="@dimen/padding_small"
+                                android:text="Father's Name:"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size" />
+
+                            <TextView
+                                android:id="@+id/tv_fathersName"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:text="FName"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutSectionAndClassName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/padding_small"
+                            android:paddingRight="@dimen/padding_small"
+                            android:visibility="gone"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_className"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="@dimen/padding_small"
+                                    android:paddingTop="@dimen/padding_small"
+                                    android:paddingRight="@dimen/padding_small"
+                                    android:paddingBottom="@dimen/padding_small"
+                                    android:text="Class"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_sectionName"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0"
+                                    android:paddingLeft="@dimen/padding_small"
+                                    android:paddingTop="@dimen/padding_small"
+                                    android:paddingRight="@dimen/padding_small"
+                                    android:paddingBottom="@dimen/padding_small"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutMonthlyFee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/padding_small"
+                            android:paddingRight="@dimen/padding_small"
+                            android:paddingBottom="@dimen/padding_small"
+                            android:visibility="gone"
+                            android:weightSum="2.5">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.5"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:paddingTop="@dimen/padding_small"
+                                android:paddingRight="@dimen/padding_small"
+                                android:text="Monthly fee:"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size" />
+
+                            <TextView
+                                android:id="@+id/tv_monthlyFee"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.5"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:text="0"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/padding_small"
+                            android:paddingRight="@dimen/padding_small"
+                            android:paddingBottom="@dimen/padding_small"
+                            android:visibility="gone"
+                            android:weightSum="2.5">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.5"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:paddingTop="@dimen/padding_small"
+                                android:paddingRight="@dimen/padding_small"
+                                android:text="Category:"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size" />
+
+                            <TextView
+                                android:id="@+id/tv_category"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.5"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:text="Category 0"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/padding_small"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/student_Img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/profile_img_w_h_180"
+                                android:maxWidth="@dimen/profile_img_w_h_180"
+                                android:layout_marginBottom="@dimen/margin_small"
+                                android:fitsSystemWindows="true"
+                                android:scaleType="centerInside"
+                                android:src="@mipmap/profile_pic" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card2"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:cardBackgroundColor="@color/white_color"
+            app:cardCornerRadius="@dimen/cardview_default_radius">
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_small">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/rg_correction"
+                        android:layout_alignBottom="@id/rg_correction"
+                        android:layout_alignParentRight="true">
+
+                        <TextView
+                            android:id="@+id/zero_waiver_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/tv_date_title"
+                            android:gravity="left"
+                            android:text="Waiver not appplicable since previous balance is zero."
+                            android:textColor="@color/red"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_date_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_toStartOf="@+id/tv_date"
+                            android:gravity="right"
+                            android:paddingRight="@dimen/padding_small"
+                            android:text="Date:"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size" />
+
+                        <TextView
+                            android:id="@+id/tv_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center"
+                            android:paddingLeft="@dimen/padding_small"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_fees"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/padding_small"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:background="@drawable/textview_border_black">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/padding_small"
+                    android:layout_marginBottom="@dimen/margin_medium">
+
+                    <include layout="@layout/total_row_1_cash_correction" />
+
+                </RelativeLayout>
+
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="@dimen/padding_small"-->
+                <!--android:layout_marginTop="@dimen/margin_medium"-->
+                <!--android:layout_marginRight="@dimen/padding_small"-->
+                <!--android:layout_marginBottom="@dimen/margin_medium">-->
+
+                <!--<include layout="@layout/cash_in_hand_row" />-->
+                <!--</RelativeLayout>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textview_border_black"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/margin_medium"
+                        android:text="Remarks"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_margin="@dimen/margin_medium"
+                        android:background="@drawable/textview_border_gray"
+                        android:gravity="start"
+                        android:inputType="textMultiLine"
+                        android:padding="@dimen/padding_small"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_small"
+                    android:weightSum="3">
+
+                    <Button
+                        android:id="@+id/bt_ok"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_rounded_bg"
+                        android:text="OK"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_green"
+                        android:textSize="@dimen/text_size_button" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_rounded_bg"
+                        android:text="Cancel"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_green"
+                        android:textSize="@dimen/text_size_button" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</ScrollView>

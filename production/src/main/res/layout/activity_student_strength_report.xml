@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/activity_student_strength_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/element_margin"
+                android:gravity="center"
+                android:text="Student Strength Validation"
+                android:textColor="@color/app_green"
+                android:textSize="@dimen/text_large" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/element_margin"
+                android:layout_marginRight="@dimen/element_margin"
+                android:layout_marginTop="@dimen/element_margin"
+                android:weightSum="1">
+
+                <TextView
+
+                    android:id="@+id/tv_visiting_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/element_margin"
+                    android:layout_weight=".5"
+                    android:text="Visiting Date"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/et_visting_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_visiting_date"
+                    android:layout_weight=".5"
+                    android:drawableRight="@drawable/calendar"
+                    android:hint="14/02/2017 " />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_small"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/element_margin"
+                    android:layout_weight=".5"
+                    android:gravity="center_horizontal"
+                    android:text="Class "
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/big_margin"
+                    android:layout_weight=".5"
+                    android:gravity="center_horizontal"
+                    android:text="Count"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_student_strength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/ll_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/element_margin"
+                android:background="@color/light_gray"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_small"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/element_margin"
+                    android:layout_weight=".5"
+                    android:gravity="center_horizontal"
+                    android:text="Total "
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_total_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/big_margin"
+                    android:layout_weight=".5"
+                    android:gravity="center_horizontal"
+                    android:text="100 "
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_marginBottom="@dimen/element_margin"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/element_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/activity_student_strength_report"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:layout_marginBottom="@dimen/element_margin"
+                android:id="@+id/btn_not_apparoved"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginEnd="@dimen/tiny_margin"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="Not-Approved" />
+
+            <Button
+                android:layout_marginBottom="@dimen/element_margin"
+                android:id="@+id/btn_approved"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="@dimen/tiny_margin"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="Approved" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

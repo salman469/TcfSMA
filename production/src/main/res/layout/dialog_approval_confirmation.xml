@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_resignation_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_app_green"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_green"
+            android:gravity="center"
+            android:padding="@dimen/padding_small"
+            android:text="Confirm"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_alert"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin_small"
+            android:paddingTop="@dimen/element_margin"
+            android:text="Name: "
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_employee_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin_small"
+            android:paddingTop="@dimen/margin_small"
+            android:text="Employee Code: "
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tv_designation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_employee_code"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin_small"
+            android:paddingTop="@dimen/margin_small"
+            android:text="Designation: "
+            android:textSize="@dimen/text_size"
+            />
+
+        <EditText
+            android:id="@+id/tv_remarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_designation"
+            android:layout_margin="@dimen/padding_small"
+            android:inputType="text"
+            android:hint="Enter Remarks"
+            android:background="@drawable/edittext_border"
+            android:padding="@dimen/margin_small"
+            android:textSize="@dimen/text_size"
+            />
+
+        <TextView
+            android:id="@+id/tv_confirm_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_remarks"
+            android:gravity="center"
+            android:paddingBottom="@dimen/element_margin"
+            android:paddingTop="@dimen/margin_small"
+            android:text="Are you sure?"
+            android:textSize="@dimen/text_size" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_confirm_text"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/ll_yes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_weight="1"
+                android:background="@color/light_green"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="Yes"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_weight="1"
+                android:background="@color/red_1"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="No"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

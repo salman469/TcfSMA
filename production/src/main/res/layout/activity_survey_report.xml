@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bgrecord"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="0.1dp"
+        android:layout_height="0.1dp"
+        android:layout_weight="1" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/school_bar"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/fee_entry_view_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_scrollFlags="enterAlways">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_green"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/schoolBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@mipmap/school_bar" >
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:padding="@dimen/padding_small">
+
+
+                    <LinearLayout
+                        android:id="@+id/l1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="@dimen/new_admission_profile_top_margin"
+                        android:layout_marginTop="@dimen/new_admission_header_school_spinner_margin_top"
+                        android:background="@drawable/spinner_bg"
+                        android:gravity="end"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_schoolName"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size"
+                            android:gravity="end"
+                            android:textStyle="bold"
+                            android:maxLines="1"
+                            android:text=""
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/white_2"/>
+
+                        <Spinner
+                            android:id="@+id/spinner_SelectSchool"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            tools:listitem="@layout/new_spinner_layout"
+                            android:spinnerMode="dialog" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/headerAreaLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="@id/l1"
+                        app:layout_constraintTop_toBottomOf="@+id/l1"
+                        app:layout_constraintEnd_toEndOf="@id/l1">
+
+                        <TextView
+                            android:id="@+id/tv_areaName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/white_2"
+                            android:textSize="@dimen/text_size"
+                            android:layout_marginEnd="@dimen/margin_medium" />
+
+                        <TextView
+                            android:id="@+id/tv_regionName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_medium"
+                            android:text=""
+                            android:textColor="@color/white_2"
+                            android:textSize="@dimen/text_size" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/mid_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="#87C440"
+                android:background="@drawable/top_curved_view_white"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/padding_small">
+
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/attendance_btn"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/menu_dropdown" />
+
+</RelativeLayout>

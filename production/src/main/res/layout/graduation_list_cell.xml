@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/graduation_cell_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/tiny_margin"
+    android:layout_marginTop="@dimen/tiny_margin"
+    android:elevation="@dimen/card_elevation">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--<include-->
+            <!--android:id="@+id/p1"-->
+            <!--layout="@layout/promotion_header"-->
+            <!--android:visibility="gone" />-->
+
+
+        <LinearLayout
+            android:weightSum="1"
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_small">
+
+            <TextView
+                android:layout_weight=".2"
+                android:id="@+id/tv_classname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:maxEms="@integer/maxEms"
+                android:text="Class-1-Green"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_heading" />
+
+            <TextView
+                android:layout_weight=".15"
+                android:id="@+id/gr_No"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="1234"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:layout_weight=".25"
+                android:id="@+id/tv_name_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Zubair Soomro"
+                android:maxEms="@integer/maxEms"
+                android:textColor="@color/app_green"
+                android:textSize="@dimen/text_size" />
+
+            <RadioGroup
+                android:layout_weight=".4"
+                android:id="@+id/rg_graduations"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rb_graduated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/element_margin"
+                    android:layout_marginRight="@dimen/element_margin"
+                    android:checked="true"
+                    app:buttonTint="@color/app_green" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rb_notgraduated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/promotion_cell_radiobutton1_margin"
+                    app:buttonTint="@color/red" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

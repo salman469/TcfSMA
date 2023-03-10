@@ -1,0 +1,30 @@
+select sum(fees_admission) as fees_admission, 
+sum(fees_exam) as fees_exam, 
+sum(fees_tution) as fees_tution, 
+sum(fees_books) as fees_books, 
+sum(fees_copies) as fees_copies, 
+sum(fees_uniform) as fees_uniform, 
+sum(fees_others) as fees_others 
+from (select sum(ar.fees_admission * case when ar.is_correction = 0 then -1 else 1 end) as fees_admission, 
+sum(ar.fees_exam* case when ar.is_correction = 0 then -1 else 1 end) as fees_exam, 
+sum(ar.fees_tution* case when ar.is_correction = 0 then -1 else 1 end) as fees_tution, 
+sum(ar.fees_books* case when ar.is_correction = 0 then -1 else 1 end) as fees_books, 
+sum(ar.fees_copies* case when ar.is_correction = 0 then -1 else 1 end) as fees_copies, 
+sum(ar.fees_uniform* case when ar.is_correction = 0 then -1 else 1 end) as fees_uniform, 
+sum(ar.fees_others* case when ar.is_correction = 0 then -1 else 1 end) as fees_others  
+from AppReceipt ar 
+left outer join CashDeposit cd on ar.cashdeposit_id = cd.id 
+inner join school_class sc on sc.id = ar.schoolclass_id and sc.school_id = 1105 
+inner join student s on s.id = ar.student_id and s.student_gr_no = 110 
+union 
+select sum(ai.fees_admission * case when ai.created_from = 'W' or ai.created_from = 'B' then -1 else 1 end) as fees_admission, 
+sum(ai.fees_exam * case when ai.created_from = 'W' or ai.created_from = 'B' then -1 else 1 end) as fees_exam, 
+sum(ai.fees_tution * case when ai.created_from = 'W' or ai.created_from = 'B' then -1 else 1 end) as fees_tution, 
+sum(ai.fees_books * case when ai.created_from = 'W' or ai.created_from = 'B' or ai.created_from = 'S' then -1 else 1 end) as fees_books, 
+sum(ai.fees_copies * case when ai.created_from = 'W' or ai.created_from = 'B' or ai.created_from = 'S' then -1 else 1 end) as fees_copies,
+sum(ai.fees_uniform * case when ai.created_from = 'W' or ai.created_from = 'B' or ai.created_from = 'S' then -1 else 1 end) as fees_uniform, 
+sum(ai.fees_others * case when ai.created_from = 'W' or ai.created_from = 'B' or ai.created_from = 'S' then -1 else 1 end) as fees_others 
+from AppInvoice ai 
+inner join school_class sc on sc.id = ai.schoolclass_id and sc.school_id = 1105 
+inner join student s on s.id = ai.student_id and s.student_gr_no = 110 
+)

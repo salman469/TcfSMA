@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:background="@color/light_app_green"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_small"
+    android:weightSum="1"
+    tools:context=".Activities.HR.EmployeeAttendancePendingActivity"
+    >
+
+    <TextView
+        android:id="@+id/tvSchool"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".7"
+        android:gravity="center"
+        android:text="School"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/tvAttendanceDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".3"
+        android:gravity="center"
+        android:text="Date"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size" />
+
+
+</LinearLayout>

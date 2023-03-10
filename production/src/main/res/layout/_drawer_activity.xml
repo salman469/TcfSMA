@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_layout" />
+
+
+    <!--fitsSystemWindows = true-->
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/header"
+        tools:openDrawer="start">
+
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="@dimen/drawer_size"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true">
+
+            <ExpandableListView
+                android:id="@+id/left_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/nav_header_height"
+                android:childDivider="#00000000"
+                android:scrollIndicators="top"
+                android:layout_marginBottom="@dimen/new_admission_profile_top_margin"
+                tools:listitem="@layout/list_item"
+                style="@style/scrollbar_style" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/new_admission_profile_top_margin"
+                android:orientation="horizontal"
+                android:background="@color/app_green"
+                android:padding="@dimen/padding"
+                android:layout_gravity="bottom"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_lastSync"
+                            android:layout_width="wrap_content"
+                            android:layout_margin="@dimen/tiny_margin"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/tiny_margin"
+                            android:background="@drawable/attendance_btn"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_lastSyncLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Last sync: "
+                                android:textColor="@color/app_green"
+                                android:textSize="@dimen/new_nav_footer_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_lastSyncOn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/app_green"
+                                android:textSize="@dimen/new_nav_footer_text_size" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_daysSince"
+                            android:layout_width="wrap_content"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_lastSync"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".8"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_daysSince"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:text="Days since: "
+                                    android:textColor="@color/gray_cell"
+                                    android:textSize="@dimen/new_nav_footer_text_size"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_syncDaysSince"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="@color/gray_cell"
+                                    android:textSize="@dimen/new_nav_footer_text_size" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_recordsPending"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/tiny_margin"
+                            android:padding="@dimen/tiny_margin"
+                            android:background="@drawable/attendance_btn"
+                            android:layout_below="@+id/ll_daysSince"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/pendingSyncRecordLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Pending Sync:"
+                                android:textColor="@color/app_green"
+                                android:textSize="@dimen/new_nav_footer_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/pendingRecordsSync"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/app_green"
+                                android:textSize="@dimen/new_nav_footer_text_size" />
+                        </LinearLayout>
+
+
+
+
+
+                    <!--                <LinearLayout-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:orientation="horizontal"-->
+                    <!--                    android:gravity="bottom">-->
+
+                    <!--                    <TextView-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:gravity="left"-->
+                    <!--                        android:text="Last sync: "-->
+                    <!--                        android:textColor="@color/gray_cell"-->
+                    <!--                        android:textSize="@dimen/new_nav_footer_text_size"-->
+                    <!--                        android:textStyle="bold" />-->
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/tv_lastSyncOn"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:text=""-->
+                    <!--                        android:textColor="@color/gray_cell"-->
+                    <!--                        android:textSize="@dimen/new_nav_footer_text_size" />-->
+
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/tv_daysSince"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:text=" | Days since: "-->
+                    <!--                        android:textColor="@color/gray_cell"-->
+                    <!--                        android:textSize="@dimen/new_nav_footer_text_size"-->
+                    <!--                        android:textStyle="bold" />-->
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/tv_syncDaysSince"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:text=""-->
+                    <!--                        android:textColor="@color/gray_cell"-->
+                    <!--                        android:textSize="@dimen/new_nav_footer_text_size" />-->
+
+                    <!--                    <TextView-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:text=" | Pending Sync:"-->
+                    <!--                        android:textColor="@color/gray_cell"-->
+                    <!--                        android:textSize="@dimen/new_nav_footer_text_size"-->
+                    <!--                        android:textStyle="bold" />-->
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/pendingRecordsSync"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:text=""-->
+                    <!--                        android:textColor="@color/gray_cell"-->
+                    <!--                        android:textSize="@dimen/new_nav_footer_text_size" />-->
+
+
+
+                    <!--                </LinearLayout>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_gravity="center_vertical"
+                    >
+                    <TextView
+                        android:id="@+id/tv_version_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ver"
+                        android:textColor="@color/gray_cell"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

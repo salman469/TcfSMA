@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/dot1" android:right="40dp">
+        <bitmap
+            android:gravity="top|left"
+            android:tint="@color/light_green"
+            android:src="@drawable/ic_dot" />
+    </item>
+    <item android:id="@+id/dot2">
+        <bitmap
+            android:gravity="top|right"
+            android:tint="@android:color/transparent"
+            android:src="@drawable/ic_dot" />
+    </item>
+
+    <item android:id="@+id/dot3" android:top="40dp">
+        <bitmap
+            android:gravity="bottom|left"
+            android:tint="@android:color/transparent"
+            android:src="@drawable/ic_dot"/>
+    </item>
+
+    <item android:id="@+id/dot4">
+        <bitmap
+            android:gravity="bottom|right"
+            android:tint="@android:color/transparent"
+            android:src="@drawable/ic_dot"/>
+    </item>
+</layer-list>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/tiny_margin"
+    android:elevation="@dimen/card_elevation"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/white">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/tv_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/grayheadingsdb"
+                    android:text="Received from HO" />
+
+                <TextView
+                    android:id="@+id/tv_sub_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_head"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/grayheadingsdb"
+                    android:textSize="@dimen/text_size_heading"
+                    android:text="Transfer" />
+
+                <TextView
+                    android:id="@+id/tv_bucketntranstype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sub_head"
+                    android:textColor="@color/grayheadingsdb"
+                    android:textSize="@dimen/text_size_heading"
+                    android:text="Bank -> Cash"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/tv_jvno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="@color/grayheadingsdb"
+                    android:textSize="@dimen/text_size_heading"
+                    android:text="23234" />
+
+                <TextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_jvno"
+                    android:textColor="@color/grayheadingsdb"
+                    android:gravity="end"
+                    android:textSize="@dimen/text_big"
+                    android:textStyle="bold"
+                    android:text="3,500" />
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_amount"
+                    android:gravity="end"
+                    android:textColor="@color/grayheadingsdb"
+                    android:textSize="@dimen/text_size_heading"
+                    android:text="29-May-20" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        />
+
+    <TextView
+        android:id="@+id/tv_showmore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/carolina"
+        android:textSize="@dimen/text_size_heading"
+        android:text="SHOW MORE" />
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>

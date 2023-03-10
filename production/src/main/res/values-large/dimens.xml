@@ -1,0 +1,107 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="element_margin">20dp</dimen>
+    <dimen name="element_margin3">10dp</dimen>
+    <dimen name="element_margin2">25dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="tiny_margin">5dp</dimen>
+    <dimen name="tinnny_margin">3dp</dimen>
+    <dimen name="radio_margin">17dp</dimen>
+    <dimen name="radio_header_margin_right">17dp</dimen>
+    <dimen name="text_size">18sp</dimen>
+    <dimen name="text_size_new">16sp</dimen>
+    <dimen name="text_size_medium">15sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_receipt_size">14sp</dimen>
+    <dimen name="text_size_xsmall">10sp</dimen>
+    <dimen name="text_size_heading">20sp</dimen>
+    <dimen name="text_large">24sp</dimen>
+    <dimen name="text_big">28sp</dimen>
+    <dimen name="text_size_button">20sp</dimen>
+    <dimen name="margin_new_enrollment_from_bottom">60dp</dimen>
+    <dimen name="imageViewWidth">30dp</dimen>
+
+    <dimen name="card_view_size">225dp</dimen>
+    <dimen name="card_elevation">5dp</dimen>
+    <dimen name="padding">15dp</dimen>
+    <dimen name="padding_small">11dp</dimen>
+    <dimen name="drawer_size">380dp</dimen>
+    <dimen name="nav_header_vertical_spacing">30dp</dimen>
+    <dimen name="nav_header_height">230dp</dimen>
+    <dimen name="paddingLarge">30dp</dimen>
+    <dimen name="big_margin">100dp</dimen>
+    <dimen name="ch_margin">50dp</dimen>
+    <dimen name="margin_login_left">90dp</dimen>
+    <dimen name="margin_login_right">90dp</dimen>
+    <dimen name="bar_chart_height">400dp</dimen>
+    <dimen name="login_logo_height">150dp</dimen>
+    <dimen name="nav_header_height_max">250dp</dimen>
+
+    <dimen name="collapsing_toolbar_height">400dp</dimen>
+    <dimen name="profile_view_image_width">250dp</dimen>
+    <dimen name="profile_view_image_height">250dp</dimen>
+    <dimen name="drawer_image_width">160dp</dimen>
+    <dimen name="drawer_image_height">160dp</dimen>
+    <dimen name="drawer_group_icons_width">60dp</dimen>
+    <dimen name="drawer_group_icons_height">60dp</dimen>
+    <dimen name="drawer_child_icons_width">60dp</dimen>
+    <dimen name="drawer_child_icons_height">60dp</dimen>
+    <dimen name="drawer_child_padding">25dp</dimen>
+    <dimen name="attendance_cell_margin">120dp</dimen>
+    <dimen name="attendance_cell_margin_header">115dp</dimen>
+    <dimen name="attendance_cell_gr_margin">25dp</dimen>
+    <dimen name="attendance_header_gr_margin">18dp</dimen>
+    <dimen name="attendance_header_f_name_margin">20dp</dimen>
+
+    <dimen name="attendance_cell_p_margin">80dp</dimen>
+    <dimen name="attendance_cell_a_margin">45dp</dimen>
+    <dimen name="attendance_cell_l_margin">0dp</dimen>
+    <dimen name="attendance_cell_l_btnradio_margin">50dp</dimen>
+    <dimen name="attendance_cell_a_btnradio_margin">40dp</dimen>
+    <dimen name="attendance_cell_p_btnradio_margin">20dp</dimen>
+
+    <dimen name="recycler_margin_bottom">70dp</dimen>
+    <dimen name="promotion_cell_margin_header_grno">70dp</dimen>
+    <dimen name="student_view_header_gr_no">120dp</dimen>
+    <dimen name="student_view_header_full_name">200dp</dimen>
+    <dimen name="promotion_cell_margin_header_fullname">160dp</dimen>
+    <dimen name="enrollment_cell_margin_header_date">140dp</dimen>
+    <dimen name="enrollment_cell_margin_header_status">300dp</dimen>
+    <dimen name="attendance_cell_fullname_margin">20dp</dimen>
+    <dimen name="promotion_cell_radiobutton1_margin">70dp</dimen>
+    <dimen name="promotion_cell_radiobutton2_margin">20dp</dimen>
+    <dimen name="promotion_cell_tv_margin_right">30dp</dimen>
+    <dimen name="promotion_header_promted_margin">50dp</dimen>
+    <dimen name="promotion_header_not_promted_margin">20dp</dimen>
+    <dimen name="minWidth">100dp</dimen>
+
+    <dimen name="dashboard_margin">9dp</dimen>
+    <dimen name="camera_width">500dp</dimen>
+    <dimen name="camera_height">800dp</dimen>
+    <dimen name="piechart">300dp</dimen>
+    <dimen name="spinner">90dp</dimen>
+
+    <integer name="maxEms">3</integer>
+
+    <dimen name="btnSyncWidth">120dp</dimen>
+    <dimen name="btnSyncHeight">35dp</dimen>
+
+    <dimen name="report_height">400dp</dimen>
+    <dimen name="text_size_dashboard">14sp</dimen>
+
+    <dimen name="new_nav_header_height">200dp</dimen>
+    <dimen name="new_drawer_size">310dp</dimen>
+    <dimen name="new_nav_footer_text_size">10sp</dimen>
+    <dimen name="new_nav_profile_pic_height">120dp</dimen>
+    <dimen name="new_nav_profile_pic_width">120dp</dimen>
+    <dimen name="new_nav_list_padding">5dp</dimen>
+<!--    <dimen name="new_nav_list_child_left_margin">24dp</dimen>-->
+    <dimen name="new_nav_list_text_left_margin">18dp</dimen>
+
+    <dimen name="radio_btn_width">160dp</dimen>
+    <dimen name="two_colored_margin">500dp</dimen>
+
+    <dimen name="fb_card_view_size">25dp</dimen>
+    <dimen name="left_margin">60dp</dimen>
+    <dimen name="card_view_size_fb_dashboard">140dp</dimen>
+</resources>

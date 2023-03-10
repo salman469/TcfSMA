@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@color/light_gray"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small">
+
+        <TextView
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:gravity="center"
+            android:text="Month/Year"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Class - Section"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Opening SSR"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="New Admission"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Readmission"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Sec In"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Sec Out"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Withdrawal"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Graduate"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Current SSR"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Capacity"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Max SSR"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Opr_utl"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Turnover"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="@dimen/margin_small"
+        android:background="@color/light_gray"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:text="GR.No"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/enrollment_cell_margin_header_date"
+            android:paddingLeft="@dimen/tiny_margin"
+            android:text="Date"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/enrollment_cell_margin_header_status"
+            android:paddingLeft="@dimen/tiny_margin"
+            android:text="Status"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</LinearLayout>

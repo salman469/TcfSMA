@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_cashinbank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:layout_weight="1"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/cashinbank_tvtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_app_green"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_small"
+                        android:text="Cash In Bank"
+                        android:textColor="@color/grayheadingsdb"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cashinbank_tvtitle"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/tv_cashinbank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/padding_small"
+                            android:text="60,000"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_big"
+                            android:textColor="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/txtWithdraw"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:layout_weight="1"
+                            android:background="@drawable/blue_button_rounded_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="5dp"
+                            android:text="Withdraw"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_button"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_resignation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:layout_weight="1"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Resignation_tvtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_app_green"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_small"
+                        android:text="Cash In Hand"
+                        android:textColor="@color/grayheadingsdb"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Resignation_tvtitle"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/tv_cashinhand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small"
+                            android:layout_gravity="center"
+                            android:text="25,000"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_big"
+                            android:textColor="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/txtDeposit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:layout_weight="1"
+                            android:background="@drawable/blue_button_rounded_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="5dp"
+                            android:text="Deposit"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_button"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="@dimen/card_elevation">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/expense_tvtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_app_green"
+                    android:padding="@dimen/margin_small"
+                    android:gravity="center"
+                    android:text="Expenses Available &amp; Spent"
+                    android:textColor="@color/grayheadingsdb"
+                    android:textSize="@dimen/text_size_heading"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/expense_tvtitle"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_small">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_pettycash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="@dimen/card_elevation">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/pettycash_tvtitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/light_app_green"
+                                    android:gravity="center"
+                                    android:padding="@dimen/margin_small"
+                                    android:text="Petty Cash"
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textSize="@dimen/text_size_heading"
+                                    android:textStyle="bold" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/pettycash_tvtitle"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/margin_small">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:padding="@dimen/padding_small"
+                                            android:textStyle="bold"
+                                            android:layout_gravity="left"
+                                            android:text="Available"
+                                            android:textColor="@color/grayheadingsdb"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/txt_available_pettycash"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_horizontal"
+                                            android:padding="@dimen/padding_small"
+                                            android:text="200"
+                                            android:textStyle="bold"
+                                            android:textSize="@dimen/text_big"
+                                            android:textColor="@color/colorAccent" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:padding="@dimen/padding_small"
+                                            android:textStyle="bold"
+                                            android:layout_gravity="left"
+                                            android:text="Spent"
+                                            android:textColor="@color/grayheadingsdb"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/txt_spent_pettycash"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_horizontal"
+                                            android:padding="@dimen/padding_small"
+                                            android:text="200"
+                                            android:textStyle="bold"
+                                            android:textSize="@dimen/text_big"
+                                            android:textColor="@color/red_color" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_advance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="@dimen/card_elevation">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/Advance_tvtitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/light_app_green"
+                                    android:gravity="center"
+                                    android:padding="@dimen/margin_small"
+                                    android:text="Advance"
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textSize="@dimen/text_size_heading"
+                                    android:textStyle="bold" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/Advance_tvtitle"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/margin_small">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:padding="@dimen/padding_small"
+                                            android:layout_gravity="left"
+                                            android:textStyle="bold"
+                                            android:text="Available"
+                                            android:textColor="@color/grayheadingsdb"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/txt_available_advance"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_horizontal"
+                                            android:padding="@dimen/padding_small"
+                                            android:text="350"
+                                            android:textStyle="bold"
+                                            android:textSize="@dimen/text_big"
+                                            android:textColor="@color/colorAccent" />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:padding="@dimen/padding_small"
+                                            android:layout_gravity="left"
+                                            android:textStyle="bold"
+                                            android:text="Spent"
+                                            android:textColor="@color/grayheadingsdb"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/txt_spent_advance"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_horizontal"
+                                            android:padding="@dimen/padding_small"
+                                            android:text="350"
+                                            android:textStyle="bold"
+                                            android:textSize="@dimen/text_big"
+                                            android:textColor="@color/red_color" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_salary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="@dimen/card_elevation">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/Salary_tvtitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/light_app_green"
+                                    android:gravity="center"
+                                    android:padding="@dimen/margin_small"
+                                    android:text="Salary"
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textSize="@dimen/text_size_heading"
+                                    android:textStyle="bold" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/Salary_tvtitle"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/margin_small">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:padding="@dimen/padding_small"
+                                            android:layout_gravity="left"
+                                            android:text="Available"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/grayheadingsdb"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/txt_available_salary"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_horizontal"
+                                            android:padding="@dimen/padding_small"
+                                            android:text="0"
+                                            android:textStyle="bold"
+                                            android:textSize="@dimen/text_big"
+                                            android:textColor="@color/colorAccent" />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:padding="@dimen/padding_small"
+                                            android:layout_gravity="left"
+                                            android:textStyle="bold"
+                                            android:text="Spent"
+                                            android:textColor="@color/grayheadingsdb"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/txt_spent_salary"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_horizontal"
+                                            android:padding="@dimen/padding_small"
+                                            android:text="0"
+                                            android:textStyle="bold"
+                                            android:textSize="@dimen/text_big"
+                                            android:textColor="@color/red_color" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_lasttransactions"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/margin_medium"
+            android:layout_weight="1"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="@dimen/card_elevation">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/lasttransactions_tvtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_app_green"
+                    android:padding="@dimen/margin_small"
+                    android:gravity="center"
+                    android:text="Last Transactions Overview"
+                    android:textColor="@color/grayheadingsdb"
+                    android:textSize="@dimen/text_size_heading"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lasttransactions_tvtitle"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_small">
+
+                    <TextView
+                        android:id="@+id/tv_lastthirtydays"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:paddingStart="@dimen/padding"
+                        android:paddingEnd="@dimen/padding"
+                        android:paddingTop="@dimen/padding"
+                        android:visibility="gone"
+                        android:textColor="@color/grayheadingsdb"
+                        android:text="Last 30 days"
+                        android:textSize="@dimen/text_size_heading"
+                        />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_lasttransactions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="always"
+                        android:paddingStart="@dimen/padding"
+                        android:paddingEnd="@dimen/padding"
+                        tools:visibility="visible">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/tv_showmore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:gravity="end"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/carolina"
+                        android:textSize="@dimen/text_size_heading"
+                        android:text="SHOW MORE" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

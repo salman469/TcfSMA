@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="7">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:text="@string/id"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9"
+        android:gravity="center"
+
+        android:padding="@dimen/padding_small"
+        android:text="@string/date"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.4"
+
+        android:gravity="center"
+
+        android:padding="@dimen/padding_small"
+        android:text="@string/description"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:text="Dpst Slip#"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:text="Dpst Date"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9"
+
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:text="@string/amount"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:text="@string/balance"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold" />
+</LinearLayout>

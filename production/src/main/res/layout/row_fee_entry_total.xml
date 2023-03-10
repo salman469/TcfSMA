@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/st_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_small"
+    android:layout_marginTop="@dimen/margin_small"
+    android:layout_marginRight="@dimen/margin_small"
+    android:layout_marginBottom="@dimen/margin_small"
+    android:elevation="@dimen/card_elevation">
+
+    <LinearLayout
+        android:weightSum="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small">
+
+        <TextView
+            android:layout_weight="2.6"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btnSyncHeight"
+            android:maxEms="1"
+            android:gravity="start"
+            android:text="Total For This Class"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:layout_weight="1.4"
+            android:id="@+id/tv_monthlyfee_total"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btnSyncHeight"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            android:gravity="left"
+            android:text="****"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_op_fee_total"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btnSyncHeight"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            android:gravity="left"
+            android:text="****"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size" />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

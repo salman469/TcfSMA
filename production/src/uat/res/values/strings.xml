@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TCF SMA-UAT</string>
+
+<!--    uat-->
+    <string name="BASE_URL">https://siswebsrv3.tcf.org.pk:3443</string>
+    <string name="BUILD_NO">.6</string>
+    <string name="URL_DOWNLOAD_PROFILE_IMAGES">https://smsuat.tcf.org.pk:9443/epanel/Resources/SIS_APP_IMAGES/</string>
+    <string name="SURVEY_BASE_URL">https://sfapi.tcf.org.pk:6443/api/</string>
+
+<!--    REPORT URL-->
+    <string name="API_DOMAIN_REPORTS">https://sf.tcf.org.pk:2443/Survey/SurveysConductedList/</string>
+
+</resources>

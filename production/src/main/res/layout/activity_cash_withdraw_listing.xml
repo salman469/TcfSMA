@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_color">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:expandedTitleMarginBottom="32dp"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_collapseMode="parallax">
+
+                <RelativeLayout
+                    android:id="@+id/inner_relativelayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/school_bar"
+                    android:fitsSystemWindows="true"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.9">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:padding="@dimen/padding_small">
+
+
+                        <LinearLayout
+                            android:id="@+id/l1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="@dimen/new_admission_profile_top_margin"
+                            android:layout_marginTop="@dimen/new_admission_header_school_spinner_margin_top"
+                            android:background="@drawable/spinner_bg"
+                            android:gravity="end"
+                            android:orientation="vertical"
+                            android:padding="@dimen/padding_small"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <Spinner
+                                android:id="@+id/spinner_SelectSchool"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                tools:listitem="@layout/new_spinner_layout"
+                                android:spinnerMode="dialog"
+                                android:visibility="visible" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/headerAreaLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="@id/l1"
+                            app:layout_constraintStart_toStartOf="@id/l1"
+                            app:layout_constraintTop_toBottomOf="@+id/l1">
+
+                            <TextView
+                                android:id="@+id/tv_areaName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_medium"
+                                android:text="North West"
+                                android:textColor="@color/white_2"
+                                android:textSize="@dimen/text_size" />
+
+                            <TextView
+                                android:id="@+id/tv_regionName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_medium"
+                                android:text="Nawshehra"
+                                android:textColor="@color/white_2"
+                                android:textSize="@dimen/text_size" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!--            <include layout="@layout/search_header_employee" />-->
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <LinearLayout
+            android:id="@+id/fee_entry_view_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="enterAlways">
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0a713a"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/mid_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/top_curved_view_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_small">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="50">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="35dp"
+                                android:src="@mipmap/ic_class"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="16dp"/>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/gr_no_icon"
+                                android:drawableStart="@drawable/gr_no_icon"
+                                android:orientation="vertical"
+                                android:layout_marginStart="@dimen/margin_medium">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Start Date"
+                                    android:textSize="@dimen/text_size" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:backgroundTint="@color/gray"
+                                    android:text="07-Dec-2019"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/calendar"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/viewDivider"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/gray"/>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="50">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="35dp"
+                                android:src="@mipmap/ic_class"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="16dp"/>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/gr_no_icon"
+                                android:drawableStart="@drawable/gr_no_icon"
+                                android:orientation="vertical"
+                                android:layout_marginStart="@dimen/margin_medium">
+
+                                <TextView
+                                    android:id="@+id/tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="End Date"
+                                    android:textSize="@dimen/text_size" />
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:backgroundTint="@color/gray"
+                                    android:layout_height="wrap_content"
+                                    android:text="31-Mar-2020"
+                                    android:drawableEnd="@drawable/calendar"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="always"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/llResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_small"
+                    android:weightSum="1">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_small"
+                        android:text="Cash Withdrawals Found:"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/tv_total_employees"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_small"
+                        android:text="24"
+                        android:textColor="@color/gray" />
+
+                </LinearLayout>
+
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="always">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_empDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="always"
+                        tools:listitem="@layout/custom_cash_withdrawal_listing_data"
+                        tools:visibility="visible">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

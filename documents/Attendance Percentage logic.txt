@@ -1,0 +1,14 @@
+Let TotalCapacity = Get total capacity (actual students) in all school classes of selected school
+Let FullAttendance = TotalWorkingDays * TotalCapacity
+
+Let TotalAbsents = Get absent count of students between the two dates of the selected school
+
+For each school class
+BEGIN
+Let NoAttendanceDays = TotalWorkingDays - Count of records in Attendance table between the two dates of the current school_class
+Let MissingCapacity += NoAttendanceDays * SchoolClassCapacity (of the current school_class)
+END
+
+FullAttendance += MissingCapacity
+
+Percentage = 100 - ((TotalAbsents / FullAttendance) * 100)

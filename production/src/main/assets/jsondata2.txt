@@ -1,0 +1,13 @@
+{
+
+ "district": [
+        {
+            "districtid": 102,
+            "districtname": "Karachi"
+            
+        }
+
+]
+
+}
+      

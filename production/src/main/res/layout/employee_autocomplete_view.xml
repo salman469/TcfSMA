@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_small">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/emp_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:text="xx"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/emp_firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_below="@id/emp_code"
+            android:text="xx"
+            android:textSize="@dimen/text_size" />
+
+
+        <TextView
+            android:id="@+id/emp_LastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_below="@id/emp_code"
+            android:layout_toEndOf="@+id/emp_firstName"
+            android:text="xx"
+            android:textSize="@dimen/text_size" />
+
+    </RelativeLayout>
+</LinearLayout>

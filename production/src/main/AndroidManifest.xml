@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tcf.sma"
+    android:versionCode="50"
+    android:versionName="1.26">>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.faketouch"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.portrait"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" /> <!-- Required to register a SyncStatusObserver to display a "syncing..." progress indicator. -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Required to enable our SyncAdapter after it's created. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Required because we're manually creating a new account. -->
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission
+        android:name="android.permission.MANAGE_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name=".CustomAppplicationClass"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="InnerclassSeparator"
+        tools:targetApi="n">
+        <activity
+            android:name=".Activities.GeneralWebviewActivity"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".Survey.activities.SurveyInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.CameraViewActivity"
+            android:configChanges="screenLayout|keyboardHidden"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.StudentFeeSetActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.FeesCollection.ReceivableStatementActivity"
+            android:exported="true" />
+        <activity android:name=".Activities.FeesCollection.CashInHandReportActivity" />
+        <activity android:name=".Activities.Expense.TransferToHoActivity" />
+        <activity
+            android:name=".Activities.UserProfileActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.Help.UserManualActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.Help.FrequentlyAskQuestionsActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.Expense.AddNewRecordActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.HelpActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.Expense.ClosingActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.Expense.TransactionListing"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.Expense.AddExpense"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.Expense.Advance"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.Expense.PettyCashCorrection"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.Expense.WithdrawCashFromBank"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.Expense.DepositCashInBank"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.SyncProgress.PendingSyncActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.SyncProgress.SyncProgressActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.HRTCT.EmployeeTCT_EntryActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.HRTCT.PreviousRegistrationsActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.HRTCT.PhasesListingActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name=".Activities.HR.ManageResignationsActivity" />
+        <activity
+            android:name=".Activities.StudentSearchForTransferActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.StudentTransferActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.HR.TerminationApproval"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.HR.ResignationApproval"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.HR.Approval_Dashboard_Listing"
+            android:configChanges="orientation|screenSize" />
+        <!--
+<activity
+            android:name=".Activities.HR.EmployeeManageLeavesActivity"
+            android:configChanges="orientation|screenSize" />
+        -->
+        <activity android:name=".Activities.FeesCollection.AccountStatement.AccountStatementNewActivity" />
+        <activity android:name=".Activities.FeesCollection.ReceiptDetails" />
+        <activity android:name=".Activities.FeesCollection.CashDepositDetail" />
+        <activity
+            android:name=".Activities.FeesCollection.ReceiptBook"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.SearchSchoolActivity"
+            android:exported="true"
+            android:label="Search School">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity android:name=".Activities.ClassReportActivity" />
+        <activity android:name=".Activities.GraduationActivity" />
+        <activity android:name=".Activities.SSRReportActivity" />
+        <activity android:name=".Activities.FeesCollection.FeesCollectionReport" />
+        <activity android:name=".Activities.SchoolReportActivity" />
+        <activity android:name=".Activities.StudentReportsActivity" />
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:label="Login" />
+        <activity android:name=".Activities.FeesCollection.DepositHistoryReport" />
+        <!--
+        This implements the account we'll use as an attachment point for our SyncAdapter. Since
+        our SyncAdapter doesn't need to authenticate the current user (it just fetches a public RSS
+        feed), this account's implementation is largely empty.
+
+        It's also possible to attach a SyncAdapter to an existing account provided by another
+        package. In that case, this element could be omitted here.
+        -->
+        <activity
+            android:name=".Activities.RegistrationActivity"
+            android:label="Registration" />
+        <activity
+            android:name=".Activities.DrawerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.School_list_Activity"
+            android:exported="true"
+            android:label="Select School">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".Activities.StudentErrorActivity"
+            android:parentActivityName=".Activities.NewDashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.NewDashboardActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.FeesCollection.StudentCollectionReport"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".Activities.SchoolDashboardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".Activities.NewDashboardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".Activities.AttendanceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activities.ClassListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".Activities.EnrollmentStatusActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".Activities.PromotionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activities.SearchActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".Activities.StudentDropoutActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".Activities.StudentEditProfileActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".Activities.StudentReadmissionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".Activities.StudentProfileActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".Activities.NewAdmissionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".Activities.UpdateExistingStudentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".Activities.StudentProfileSearchActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activities.StudentDropoutSearchActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activities.ForgotPassword"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".Activities.AreaManagerStudentSelection"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".Activities.ForgotPinVerification"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".Activities.ForgotPasswordConformation" />
+        <activity android:name=".Activities.ProfileValidationActivity" />
+        <activity
+            android:name=".Activities.LogActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Survey.activities.ProjectsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Survey.activities.CameraActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Survey.activities.DashboardActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Survey.activities.SelectSchoolActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Survey.activities.EmployeeSelector"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Survey.activities.CourseSelector"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Survey.activities.PendingSurveys"
+            android:label="@string/title_activity_pending_surveys"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Survey.activities.WebviewActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name=".Survey.activities.SurveyReportActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="sensor" />
+
+        <receiver android:name=".Survey.httpServices.SyncSurveys" />
+        <receiver
+            android:name=".Survey.activities.TestReceiver"
+            android:enabled="false"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".Activities.CameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Camera2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Camera.CameraActivity2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Camera.CameraPreview"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Camera.Camera2ActivityNew"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activities.StudentStrengthReport" />
+        <activity android:name=".Activities.PrincipalSSRValidation" />
+        <activity android:name=".Activities.DSNUnapprovedStudentsActivity" />
+        <activity android:name=".Activities.DSNUapprovedReason" />
+        <activity
+            android:name=".Activities.FeesCollection.AccountStatement.AccountStatementActivity"
+            android:label="Accounts Statement"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".Activities.FeesCollection.ViewReceivables.ViewReceivables" />
+        <activity
+            android:name=".Activities.FeesCollection.CashInHandAndDeposit.CashInHandActivity"
+            android:label="Cash In Hand"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Activities.FeesCollection.CashInHandAndDeposit.CashDepositActivity"
+            android:label="Cash Deposit" />
+        <activity
+            android:name=".Activities.FeesCollection.CashReceived.CashReceiptActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Cash Receipt" />
+        <activity
+            android:name=".Activities.FeesCollection.CashReceived.CashCorrectionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name=".Activities.FeesCollection.CashReceived.WavierActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".Activities.FeesCollection.ViewSSR.ViewSSRActivity" />
+        <activity android:name=".Activities.ChangePasswordActivity" />
+        <activity android:name=".Activities.FeesCollection.AttendancePendingActivity" />
+        <activity android:name=".Activities.WeakestAttendanceActivity" />
+        <activity android:name=".Activities.HighestDuesStudentsListActivity" />
+        <activity android:name=".Activities.Help.AboutUsActivity" />
+        <activity
+            android:name=".Activities.FeeEntryActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.HR.EmployeeListing"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.HR.EmployeeDetailsActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.HR.EmployeeSeparation"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activities.HR.ApprovalList_Terminate"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <provider
+            android:name=".Helpers.DataProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            android:label="Images" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.com.vansuita.pickimage.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/picker_provider_paths" />
+        </provider>
+        <provider
+            android:name=".Helpers.GenericFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name=".SyncClasses.SyncService"
+            android:exported="true">
+
+            <!--
+            This intent filter is required. It allows the system to launch our sync service
+            as needed.
+            -->
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <!-- This points to a required XML file which describes our SyncAdapter. -->
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+        <service
+            android:name=".SyncClasses.GenericAccountService"
+            android:exported="true">
+
+            <!-- Required filter used by the system to launch our account service. -->
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <!-- This points to an XML file which describes our account service. -->
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <service
+            android:name=".Services.FirebaseNotificationService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- <service -->
+        <!-- android:name=".Services.FirebaseTokenGenerateService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.INSTANCE_ID_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!--
+<service
+            android:name=".Scheduler.KeepAliveService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+        -->
+        <!--
+<service
+            android:name=".Scheduler.DashboardScheduler"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+        -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAN92h7DhnKWOy8Hsk8pcvcSREn9zMNrU0" />
+    </application>
+
+</manifest>

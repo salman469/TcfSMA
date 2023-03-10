@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="5"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_labelHeader"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:text=""
+        android:background="@drawable/textview_border_black"
+        android:padding="@dimen/padding_small"
+        android:textSize="@dimen/text_receipt_size"
+        android:textColor="@color/grayheadingsdb"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_labelOpening"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Opening"
+        android:background="@drawable/textview_border_black"
+        android:padding="@dimen/padding_small"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="@dimen/text_receipt_size"
+        android:textColor="@color/grayheadingsdb"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_labelReceivable"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Receivable"
+        android:background="@drawable/textview_border_black"
+        android:padding="@dimen/padding_small"
+        android:gravity="center"
+        android:textSize="@dimen/text_receipt_size"
+        android:textColor="@color/grayheadingsdb"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_labelReceived"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Received"
+        android:background="@drawable/textview_border_black"
+        android:padding="@dimen/padding_small"
+        android:gravity="center"
+        android:textSize="@dimen/text_receipt_size"
+        android:textColor="@color/grayheadingsdb"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_labelBalance"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Closing"
+        android:background="@drawable/textview_border_black"
+        android:padding="@dimen/padding_small"
+        android:gravity="center"
+        android:textSize="@dimen/text_receipt_size"
+        android:visibility="gone"
+        android:textColor="@color/grayheadingsdb"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_labelClosingActive"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Active"
+        android:background="@drawable/textview_border_black"
+        android:padding="@dimen/padding_small"
+        android:gravity="center"
+        android:textSize="@dimen/text_receipt_size"
+        android:visibility="gone"
+        android:textColor="@color/grayheadingsdb"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_labelClosingInActive"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="InActive"
+        android:background="@drawable/textview_border_black"
+        android:padding="@dimen/padding_small"
+        android:gravity="center"
+        android:textSize="@dimen/text_receipt_size"
+        android:visibility="gone"
+        android:textColor="@color/grayheadingsdb"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

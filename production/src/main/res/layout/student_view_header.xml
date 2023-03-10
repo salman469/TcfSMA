@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tinnny_margin"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/app_green"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Students: "
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/text_big"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_total_students"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/text_big"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_filterBy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small"
+        android:visibility="gone"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:text="Filter By:"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/sp_filterBy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:background="@drawable/edittext_border">
+
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@color/light_gray"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small"
+        android:weightSum="2.5">
+
+        <LinearLayout
+            android:id="@+id/ll_stdId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Std id"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_stdId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_grno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GR.No"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_grno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_stdname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_stdname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_admDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adm Date"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_admDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/arrow_up_float" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_classSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:text="Class"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_classSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/arrow_up_float"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

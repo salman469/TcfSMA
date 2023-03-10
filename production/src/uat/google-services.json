@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "18076608166",
+    "project_id": "tcf-sma-uat",
+    "storage_bucket": "tcf-sma-uat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18076608166:android:20d589416b8e0cf6a6b667",
+        "android_client_info": {
+          "package_name": "com.tcf.sma.uat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18076608166-e0mqge6lu997chffc1ak3prt5f7snv2i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tcf.sma.uat",
+            "certificate_hash": "e9726752025a59afe152da4350745cd34aa7efdb"
+          }
+        },
+        {
+          "client_id": "18076608166-ukt7jpd5qkl48h6u527t88m6dvsr27cb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU-rYefxmQkJN4Ob_xjcQlGaHjT3jUat8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18076608166-ukt7jpd5qkl48h6u527t88m6dvsr27cb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

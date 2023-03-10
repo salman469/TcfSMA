@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_dropdown"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/relativeLayout_header"
+    android:layout_alignParentRight="true"
+    android:background="#505050"
+    android:visibility="gone">
+
+    <Button
+        android:id="@+id/btn_menu_outlets"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="Outlets near me"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/btn_menu_offline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_menu_outlets"
+        android:background="@null"
+        android:text="Offline forms"
+        android:textColor="#ffffff" />
+
+    <View
+        android:layout_width="130dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/btn_menu_outlets"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff" />
+
+
+</RelativeLayout>

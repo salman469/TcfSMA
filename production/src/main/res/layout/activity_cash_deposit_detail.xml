@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    android:focusableInTouchMode="true"
+    android:nestedScrollingEnabled="true"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:cardBackgroundColor="@color/white_color"
+            app:cardCornerRadius="@dimen/cardview_default_radius">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_small"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".2"
+                        android:text="Slip No."
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+
+                        android:id="@+id/etSlipNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:background="@drawable/edittext_border"
+                        android:gravity="start"
+                        android:inputType="number"
+                        android:padding="@dimen/padding_small"
+                        android:text="123" />
+
+                    <ImageView
+                        android:id="@+id/iv_search"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:layout_weight=".1"
+                        android:background="@color/light_app_green"
+                        android:clickable="true"
+                        android:src="@drawable/ic_search"
+                        android:tint="@color/app_green" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_fees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_small"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/padding_small"
+                        android:layout_marginBottom="@dimen/margin_medium"
+                        android:background="@drawable/textview_border_black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ch_margin"
+                        android:background="@drawable/textview_border_black"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/margin_medium"
+                            android:text="Remarks"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_remarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:background="@drawable/textview_border_gray"
+                            android:enabled="false"
+                            android:gravity="start"
+                            android:inputType="textMultiLine"
+                            android:padding="@dimen/padding_small"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_medium"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/padding_small">
+
+                        <Button
+                            android:id="@+id/bt_ok"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_rounded_bg"
+                            android:text="Exit"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_green"
+                            android:textSize="@dimen/text_size_button" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:elevation="@dimen/card_elevation"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_small">
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/gr_No"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="1234"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl1"
+            android:layout_marginTop="@dimen/margin_small">
+
+            <TextView
+                android:id="@+id/tv_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Zubair Soomro"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_big" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/rl3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text123"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S/O"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/tv_father_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:text="Mumtaz Ali Soomro"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_heading" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl3"
+            android:layout_marginTop="@dimen/margin_small">
+
+            <RadioGroup
+                android:id="@+id/rg_attendance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RadioButton
+                    android:id="@+id/present"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Present"
+                    android:textColor="@color/app_green"
+                    android:textSize="@dimen/text_size" />
+
+                <RadioButton
+                    android:id="@+id/absent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Absent"
+                    android:textColor="@color/red_color"
+                    android:textSize="@dimen/text_size" />
+
+                <RadioButton
+                    android:id="@+id/leaves"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Leave"
+                    android:textColor="@color/blue_color"
+                    android:textSize="@dimen/text_size" />
+            </RadioGroup>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

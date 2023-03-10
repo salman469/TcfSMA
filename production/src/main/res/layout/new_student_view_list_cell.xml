@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/st_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:padding="@dimen/padding_small"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/tv_student_id"
+                android:layout_width="@dimen/report_min_width"
+                android:layout_height="wrap_content"
+                android:maxEms="1"
+                android:text="666666"
+                android:gravity="start"
+                android:textColor="@color/colorBlack"
+                android:padding="@dimen/margin_small"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/gr_No"
+                android:layout_width="@dimen/report_min_width"
+                android:layout_height="wrap_content"
+                android:maxEms="1"
+                android:text="1234"
+                android:textColor="@color/colorBlack"
+                android:padding="@dimen/margin_small"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/tv_name_text"
+                android:layout_width="@dimen/report_width"
+                android:layout_height="wrap_content"
+                android:maxEms="2"
+                android:text="Zubair Soomro"
+                android:textColor="@color/colorPrimary"
+                android:padding="@dimen/margin_small"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/tv_admission_date"
+                android:layout_width="@dimen/report_width"
+                android:layout_height="wrap_content"
+                android:maxEms="2"
+                android:text="12-Mar-19"
+                android:textColor="@color/colorPrimary"
+                android:padding="@dimen/margin_small"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/tv_class_sec"
+                android:layout_width="@dimen/report_width"
+                android:layout_height="wrap_content"
+                android:maxEms="2"
+                android:text="5-A"
+                android:layout_marginStart="@dimen/margin_small"
+                android:textColor="@color/colorBlack"
+                android:padding="@dimen/margin_small"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/tv_monthly_fee"
+                android:layout_width="@dimen/report_width"
+                android:layout_height="wrap_content"
+                android:maxEms="2"
+                android:text="1000"
+                android:layout_marginStart="@dimen/margin_small"
+                android:textColor="@color/colorBlack"
+                android:padding="@dimen/margin_small"
+                android:textSize="@dimen/text_size"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="@dimen/report_width"
+                android:layout_height="wrap_content"
+                android:maxEms="2"
+                android:text="Category"
+                android:layout_marginStart="@dimen/margin_small"
+                android:padding="@dimen/margin_small"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

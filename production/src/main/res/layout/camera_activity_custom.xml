@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tcf.sma.Activities.CameraActivity">
+
+    <RelativeLayout
+        android:id="@+id/parentSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tcf.sma.Camera.Preview
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+    <com.tcf.sma.Camera.TouchView
+        android:id="@+id/left_top_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/captureimg" />
+
+    <com.tcf.sma.Views.VerticalTextView
+        android:id="@+id/captureimg"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:gravity="center|bottom"
+        android:padding="@dimen/element_margin"
+        android:text="Capture"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+</RelativeLayout>

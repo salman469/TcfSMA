@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" style="text/css"/>
+    <link href="css/jquery-ui.css" rel="stylesheet" style="text/css"/>
+    <!--<link rel="stylesheet" style="text/css" href="css/font-awesome.min.css" />   -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" style="text/css"/>
+    <link href="css/AdminLTE.css" rel="stylesheet" style="text/css"/>
+</head>
+<body class="skin-blue  pace-done">
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui.js" type="text/javascript"></script>
+<script src="js/json2.js" type="text/javascript"></script>
+<script src="js/formControl.js" type="text/javascript"></script>
+<script src="js/textboxControl.js" type="text/javascript"></script>
+<script src="js/dropdownControl.js" type="text/javascript"></script>
+<script src="js/datepickerControl.js" type="text/javascript"></script>
+<script src="js/integerTextboxControl.js" type="text/javascript"></script>
+<script src="js/checkboxControl.js" type="text/javascript"></script>
+<script src="js/singlechoicedropdownControl.js" type="text/javascript"></script>
+<script src="js/singlechoiceRadioControl.js" type="text/javascript"></script>
+<script src="js/multiplechoicedropdownControl.js" type="text/javascript"></script>
+<script src="js/multichoiceCheckboxControl.js" type="text/javascript"></script>
+<script src="js/openendedtextboxTextControl.js" type="text/javascript"></script>
+<script src="js/openendedtextboxIntegerControl.js" type="text/javascript"></script>
+<script src="js/bodytextControl.js" type="text/javascript"></script>
+<script src="js/numberCounterControls.js" type="text/javascript"></script>
+<script src="js/rangesliderControl.js" type="text/javascript"></script>
+<script src="js/stopwatchControl.js" type="text/javascript"></script>
+<script src="js/radioControl.js" type="text/javascript"></script>
+<script src="js/surveyForm.js" type="text/javascript"></script>
+<script src="js/stwController.js" type="text/javascript"></script>
+<script src="js/input_mask.js" type="text/javascript"></script>
+<script src="js/soundrecordControls.js" type="text/javascript"></script>
+<script src="js/imageLoadControl.js" type="text/javascript"></script>
+<script src="js/multiselectimageControl.js" type="text/javascript"></script>
+
+<div class="wrapper">
+    <div class="container">
+        <h1></h1>
+        <form id='fData' role="form"></form>
+        <div id='cData' style="display:none;"></div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="parent_body">
+            <button class="btn btn-default prev_button" id="btn-left"><img src="img/back_arrow.png">
+            </button>
+            <p class="counter_text"><span> 1</span> of 1</p>
+            <button class="btn btn-default" id="btn-right"><img src="img/forward_arrow.png">
+            </button>
+        </div>
+    </div>
+</footer>
+
+<div class="alert" id="res"></div>
+
+<script language="javascript">
+	var sf = null;
+    var language = 'ar'; //android.GetLanguage();
+	var new_jData12='[{"Id":"5458","FieldName":"hdhdhdhdhdhd","Instructions":"الرجاء لاحظ أن هذه الزجاجات خالية من المشروبات ولا تمثل عن أي ماركات . كل مايهمنا فقط تصميم العبوة ، وشكلها والمظهر العام لها. بالتالي، إجابتك تحتاج أن تكون مبنية على التصميم / الشكل فقط والمظهر العام للزجاجة","FieldType":"RDO","Mandatory":"True","Visible":"True","ScriptOnEntry":"","ScriptOnValidate":"","ScriptOnExit":"","Options":[{"Id":"1","Option":"موسي","MediaFiles":[{"FileName":"_4877_current.png","FileCode":"Default","FileType":"Image","Options":{"RunAuto":true}}]},{"Id":"2","Option":"هولستن","MediaFiles":[{"FileName":"_4877_comp_holsten.png","FileCode":"Default","FileType":"Image","Options":{"RunAuto":true}}]},{"Id":"3","Option":"كلاهما","MediaFiles":[{"FileName":"qa-both.png","FileCode":"Default","FileType":"Image","Options":{"RunAuto":true}}]},{"Id":"4","Option":"ولا واحدة منهما ","MediaFiles":[{"FileName":"qa-none.png","FileCode":"Default","FileType":"Image","Options":{"RunAuto":true}}]}],"Orientation":"H"    }]';
+	
+    $(document).ready(function () 
+    {
+        //Open style.css according to language
+        var cssId = 'styles';  // you could encode the css path itself to generate id..
+        if (!document.getElementById(cssId))
+        {
+            var head  = document.getElementsByTagName('head')[0];
+            var link  = document.createElement('link');
+            link.id   = cssId;
+            link.rel  = 'stylesheet';
+            link.type = 'text/css';
+            if (language.toUpperCase() != 'EN') {
+                link.href = 'css/style.'+language+'.css';
+            } else {
+                link.href = 'css/style.css';
+            }
+            link.media = 'all';
+            head.appendChild(link);
+        }
+
+
+        try {
+			//var and_json = android.getData();
+             var and_json='';
+			
+			 var and_json=new_jData12;
+			 
+              and_json=and_json.replace('\"', '"');
+			  
+			sf = new surveyForm(and_json);
+			
+			sf.build();
+
+			$('#fData').html(sf.formView);
+
+			$('#cData').html(sf.connectedFormView);
+			
+			$(".btn").click(function(event)
+			{
+				event.preventDefault(); // cancel default behavior
+			});
+
+            sf.refreshPage();
+        }
+        catch(err) {
+           // android.alert(err.stack);
+        }                  
+       
+		if(language.toUpperCase() == "AR") {
+
+			$('html').attr('dir','rtl');
+			$('.mrradio div').addClass('radio-ar');
+			$('.mmchkbx div').addClass('radio-ar');
+			$('.counter_text span').addClass('frst-pgn');
+
+			$('#btn-right').addClass('backButton');
+			$('#btn-right').click(function() {
+				sf.PrevPage();
+			});
+
+			$('#btn-left').addClass('forwardButton');
+			$('#btn-left').click(function() {
+				sf.NextPage();
+
+			});
+		}
+		else {
+		    $('#btn-right').addClass('forwardButton');
+		    $('#btn-right').click(function() {
+		        sf.NextPage();
+		    });
+
+		    $('#btn-right').addClass('backButton');
+		    $('#btn-left').click(function() {
+		        sf.PrevPage();
+		    });
+		}
+
+		$(window).resize(function() {
+			resizePageLayout();
+			resizeShelfImages();
+		});
+
+		resizePageLayout();
+		resizeShelfImages();
+
+	});
+
+	function resizePageLayout() {
+		var prntbdywdth = $('.parent_body').width();
+		var getwdth = $('.counter_text').width();
+		var getwdthbtn = $('.parent_body button img').width() + 15; //with padding
+		var ttlbtn = getwdthbtn * 2;
+		$('.counter_text').css('width' , prntbdywdth- ttlbtn);
+
+		var winhgt = $(window).height();
+		var fthgt = $('.footer').height();
+		var mrgn_ft = winhgt - fthgt;
+		$('.wrapper').height(mrgn_ft - 30);
+
+		/*var lblwdth = $(window).width();
+		var spnwdth = $('.radio-ar span').width();
+		var prdwdth = lblwdth - spnwdth;
+		$('.radio-ar p').width(prdwdth - 30);*/
+	}
+
+	function resizeShelfImages() {
+
+		var shelfHeight=new Array();
+		var shelfWidth=new Array();
+
+
+		var shelfImgHeight=new Array();
+		var shelfImgWidth=new Array();
+
+		var shelfImageHeightRatio=new Array();
+		var shelfImageWidthRatio=new Array();
+
+		var actualShelf=new Array();
+		var shthis=new Array();
+
+		var shelfInnerHeight=new Array();
+		var bottleOuterHeight=new Array();
+		var currentShelfHeight=new Array();
+		var shelfAreaHeight=new Array();
+		var rowsLength=new Array();
+		var shelfAreaWidth=new Array();
+
+		var i=0;
+
+		$('.shelf-bordr').each(function(indexsb){
+
+			bg_url=$(this).css('background-image').replace(/url\(|\)$|"/ig, '');
+
+			actualShelf[indexsb] = new Image();
+			actualShelf[indexsb].src=bg_url;
+
+
+			shelfAreaWidth[indexsb]=actualShelf[indexsb].width-actualShelf[indexsb].height+$('.wrapper').height();
+			shelfAreaHeight[indexsb]=$('.wrapper').height();
+
+			currentShelfHeight[indexsb]=shelfAreaHeight[indexsb]-($('.sh_label').height()+55);
+
+			$(this).css('width',shelfAreaWidth[indexsb]);
+			$(this).css('height',currentShelfHeight[indexsb]);
+
+			rowsLength[indexsb]=$(this).find('div.prd_row_wrap').length;
+
+			shthis[indexsb] = $(this);
+
+			shthis[indexsb].find('img').each(function(indexi){
+
+				if(typeof shelfInnerHeight[indexsb]=='undefined' || shelfInnerHeight[indexsb]==null) {
+					shelfInnerHeight[indexsb]=new Array();
+				}
+
+				if(typeof bottleOuterHeight[indexsb]=='undefined' || bottleOuterHeight[indexsb]==null) {
+					bottleOuterHeight[indexsb]=new Array();
+				}
+
+				shelfInnerHeight[indexsb][indexi] = currentShelfHeight[indexsb]/100*91;
+
+				bottleOuterHeight[indexsb][indexi] = shelfInnerHeight[indexsb][indexi] / rowsLength[indexsb];
+	   
+				$(this).css('min-width',10);
+				$(this).css('min-height',20);
+
+				$(this).parent().parent().css('height', bottleOuterHeight[indexsb][indexi]);
+			});
+		});
+
+
+		var resizeTimer;
+		clearTimeout(resizeTimer);
+		resizeTimer = setTimeout(function () {
+		    if (sf != null) sf.refreshPage();
+		}, 100);
+
+	}
+
+	function getPartialData(){  
+		sf.saveData();
+	}
+
+	function setValues(id,filename,path) {
+		sf.setRecordingValue(id,filename,path);
+		android.testFunction();
+	}
+
+	function updateValues(data) {
+		sf.updateValues(data);
+		android.testFunction();
+	}
+
+</script>
+</body>
+</html>

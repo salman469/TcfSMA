@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="rectangle"/>
+    </item>
+    <item
+        android:width="12dp"
+        android:height="12dp"
+        android:gravity="right|center_vertical">
+        <bitmap
+            android:src="@mipmap/drop_down"
+            android:tint="@color/colorPrimaryDark"/>
+    </item></layer-list>

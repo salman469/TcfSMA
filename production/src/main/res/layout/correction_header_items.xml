@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="5.5">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:background="@drawable/textview_border_gray"
+        android:padding="@dimen/padding_small"
+        android:textSize="@dimen/text_size_small" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/textview_border_gray"
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:text="Old Sale"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/textview_border_gray"
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:text="Old Recvd"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold" />
+
+    <!--<TextView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:padding="@dimen/padding_small"-->
+    <!--android:background="@drawable/textview_border_gray"-->
+    <!--android:gravity="center"-->
+    <!--android:textStyle="bold"-->
+    <!--android:textColor="@color/colorBlack"-->
+    <!--android:textSize="@dimen/text_size_small"-->
+    <!--android:text="Sales Correction"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <TextView
+        android:id="@+id/tv_waiverorcorrection"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/textview_border_gray"
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:text="New Sale"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/textview_border_gray"
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:text="New Recvd"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold" />
+
+</LinearLayout>

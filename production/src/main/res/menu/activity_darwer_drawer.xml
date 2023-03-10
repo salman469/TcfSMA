@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_school"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/school" />
+
+        <item
+            android:id="@+id/nav_students"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/students">
+
+            <menu>
+                <item
+                    android:id="@+id/nav_view_profile"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="@string/view_profile" />
+                <item
+                    android:id="@+id/nav_new_enrollment"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="@string/new_enrollment" />
+                <item
+                    android:id="@+id/nav_attendance"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="@string/attendance" />
+                <item
+                    android:id="@+id/nav_promotions_graducation"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="@string/promotions_graduation" />
+                <item
+                    android:id="@+id/nav_withdrawal_dropoff"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="@string/withdrawal_dropoff" />
+            </menu>
+        </item>
+        <item
+            android:id="@+id/nav_task"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/task" />
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/reports" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/logout" />
+    </group>
+
+
+</menu>

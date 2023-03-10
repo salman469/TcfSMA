@@ -1,0 +1,238 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--    <data>-->
+    <!--        <variable-->
+    <!--            name="sm"-->
+    <!--            type="com.tcf.sma.Models.SchoolModel" />-->
+    <!--    </data>-->
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_green"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/mid_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/top_curved_view_white"
+            android:orientation="vertical"
+            android:padding="@dimen/paddingLarge">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Region"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/et_region"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_border"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:imeActionLabel="Next"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:padding="@dimen/padding_small"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:text="Area"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/et_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_border"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:imeActionLabel="Next"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:padding="@dimen/padding_small"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:text="School ID"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/et_schoolId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_border"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:imeActionLabel="Next"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:padding="@dimen/padding_small"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:text="School Name"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/et_schoolName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_border"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:imeActionLabel="Next"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:padding="@dimen/padding_small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:text="EMIS Code"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/et_emisCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_border"
+                        android:gravity="center"
+                        android:imeActionLabel="Next"
+                        android:imeOptions="actionNext"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:padding="@dimen/padding_small"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:text="Principal Name"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/et_principalName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_border"
+                        android:gravity="center"
+                        android:imeActionLabel="Next"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:padding="@dimen/padding_small"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:text="Visit Date"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/et_visitDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_border"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:imeActionLabel="Next"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:padding="@dimen/padding_small"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:text="Visitor Name"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/et_visitorName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_border"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:imeActionLabel="Next"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:padding="@dimen/padding_small"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:text="Visior Designation"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/et_visitorDesignation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_border"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:imeActionLabel="Next"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:padding="@dimen/padding_small"
+                        android:singleLine="true" />
+
+                    <Button
+                        android:id="@+id/btnBeginSurvey"
+                        style="@style/ButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/paddingLarge"
+                        android:text="Begin Survey" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

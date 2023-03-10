@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    android:focusableInTouchMode="true"
+    android:nestedScrollingEnabled="true"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:cardBackgroundColor="@color/white_color"
+            app:cardCornerRadius="@dimen/cardview_default_radius">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_small"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:text="Receipt No."
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/etReceiptNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:background="@drawable/edittext_border"
+                        android:gravity="start"
+                        android:padding="@dimen/padding_small"
+                        android:inputType="number"
+                        android:text="123"
+                        android:textColor="@color/colorBlack" />
+
+                    <ImageView
+                        android:id="@+id/iv_search"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:layout_weight=".1"
+                        android:background="@color/light_app_green"
+                        android:clickable="true"
+                        android:src="@drawable/ic_search"
+                        android:tint="@color/app_green" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/linearLayoutStudentId"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:paddingRight="@dimen/padding_small"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="@dimen/padding_small"
+                                    android:paddingTop="@dimen/padding_small"
+                                    android:paddingRight="@dimen/padding_small"
+                                    android:text="Student Id:"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/text_size" />
+
+                                <TextView
+                                    android:id="@+id/tv_student_id"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="@dimen/padding_small"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayoutGR"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:paddingRight="@dimen/padding_small"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="@dimen/padding_small"
+                                    android:paddingTop="@dimen/padding_small"
+                                    android:paddingRight="@dimen/padding_small"
+                                    android:text="Gr No:"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/text_size" />
+
+                                <TextView
+                                    android:id="@+id/tv_gr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="@dimen/padding_small"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayoutName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:paddingRight="@dimen/padding_small"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="@dimen/padding_small"
+                                    android:paddingTop="@dimen/padding_small"
+                                    android:paddingRight="@dimen/padding_small"
+                                    android:text="Name:"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/text_size" />
+
+                                <TextView
+                                    android:id="@+id/tv_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="@dimen/padding_small"
+                                    android:text="Name"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayoutFName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:paddingRight="@dimen/padding_small"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="@dimen/padding_small"
+                                    android:paddingTop="@dimen/padding_small"
+                                    android:paddingRight="@dimen/padding_small"
+                                    android:text="Father's Name:"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/text_size" />
+
+                                <TextView
+                                    android:id="@+id/tv_fathersName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="@dimen/padding_small"
+                                    android:text="FName"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayoutSectionAndClassName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/padding_small"
+                                android:paddingRight="@dimen/padding_small"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_className"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:paddingLeft="@dimen/padding_small"
+                                        android:paddingTop="@dimen/padding_small"
+                                        android:paddingRight="@dimen/padding_small"
+                                        android:paddingBottom="@dimen/padding_small"
+                                        android:text="Class"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/text_size"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tv_sectionName"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0"
+                                        android:paddingLeft="@dimen/padding_small"
+                                        android:paddingTop="@dimen/padding_small"
+                                        android:paddingRight="@dimen/padding_small"
+                                        android:paddingBottom="@dimen/padding_small"
+                                        android:text=""
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/text_size"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/bt_correction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="@dimen/margin_medium"
+                            android:background="@drawable/button_rounded_bg"
+                            android:paddingStart="@dimen/paddingLarge"
+                            android:paddingEnd="@dimen/paddingLarge"
+                            android:text="Correction"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_green"
+                            android:textSize="@dimen/text_size_button" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_fees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_small"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/padding_small"
+                        android:layout_marginBottom="@dimen/margin_medium"
+                        android:background="@drawable/textview_border_black" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_medium"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/padding_small">
+
+                        <Button
+                            android:id="@+id/bt_ok"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_rounded_bg"
+                            android:text="Exit"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_green"
+                            android:textSize="@dimen/text_size_button" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgrecord"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout_header"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Info Log"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view_info"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#d2a957" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Error Log"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view_error"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#231F20" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#000000" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrl_down"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttons"
+        android:fillViewport="true"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/red_back"
+            android:padding="10dp" />
+    </ScrollView>
+
+    <include layout="@layout/menu_header" />
+
+    <include layout="@layout/menu_footer" />
+
+
+</RelativeLayout>

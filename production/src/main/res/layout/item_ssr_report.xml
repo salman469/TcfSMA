@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@color/light_app_green"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small">
+
+        <TextView
+            android:id="@+id/tvMonthYear"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:gravity="center"
+            android:text="xxxx"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_class_sec"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="xxxx"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_opening_ssr"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="xxxx"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_new_admission"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="xxxx"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_readmission"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="xxxx"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_sec_in"
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="xxxx"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_sec_out"
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_withdrawal"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="xxxx"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_graduate"
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="xxxx"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_current_ssr"
+            android:layout_width="@dimen/report_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="xxxx"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_capacity"
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="xxxx"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_max_ssr"
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="xxxx"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_opr_utl"
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="xxxx"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_turnover"
+            android:layout_width="@dimen/report_min_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="xxxx"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

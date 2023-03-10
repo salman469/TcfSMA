@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray2"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--Federal Board Dashboard-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fb_cv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:layout_weight="1"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="@dimen/card_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/fb_tvtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_app_green"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_small"
+                        android:text="@string/federal_board_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_tbv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/margin_small"
+                                android:text="@string/to_be_verified_title"
+                                android:textColor="@color/grayheadingsdb" />
+
+                            <TextView
+                                android:id="@+id/to_be_verified_tvCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@+id/tv_tbv"
+                                android:padding="@dimen/margin_small"
+                                android:textColor="@color/grayheadingsdb" />
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="15dp"
+                            android:layout_height="1dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/tv_afa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/margin_small"
+                                android:text="@string/available_for_approval_title"
+                                android:textColor="@color/grayheadingsdb" />
+
+                            <TextView
+                                android:id="@+id/available_for_approval_tvCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@+id/tv_afa"
+                                android:padding="@dimen/margin_small"
+                                android:textColor="@color/grayheadingsdb" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_approved"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/margin_small"
+                                android:text="@string/approved_title"
+                                android:textColor="@color/grayheadingsdb" />
+
+                            <TextView
+                                android:id="@+id/approved_tvCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="35dp"
+                                android:layout_toRightOf="@+id/tv_approved"
+                                android:padding="@dimen/margin_small"
+                                android:textColor="@color/grayheadingsdb" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="15dp"
+                            android:layout_height="1dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_notapproved"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/margin_small"
+                                android:text="@string/not_approved_title"
+                                android:textColor="@color/grayheadingsdb" />
+
+                            <TextView
+                                android:id="@+id/not_pproved_tvCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="35dp"
+                                android:layout_toRightOf="@+id/tv_approved"
+                                android:padding="@dimen/margin_small"
+                                android:textColor="@color/grayheadingsdb" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!--Attendance and Attendance taken-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/card_view_size"
+                android:layout_margin="@dimen/margin_medium"
+                android:layout_weight="1"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/CVAttendance_tvtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_app_green"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_small"
+                        android:text="@string/attendance"
+                        android:textColor="@color/grayheadingsdb"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/CVssr_tvAttendancePercentage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/CVAttendance_tvtitle"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/margin_small"
+                        android:text="0%"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/CVssr_tvAttendancePercentage"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_small"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text="Today: "
+                                android:textColor="@color/grayheadingsdb" />
+
+                            <TextView
+                                android:id="@+id/tv_todayAttendance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text=""
+                                android:textColor="@color/grayheadingsdb" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text="This month: "
+                                android:textColor="@color/grayheadingsdb" />
+
+                            <TextView
+                                android:id="@+id/tv_thisMonthAttendance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text="--"
+                                android:textColor="@color/grayheadingsdb" />
+                            />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text="This Session: "
+                                android:textColor="@color/grayheadingsdb" />
+
+                            <TextView
+                                android:id="@+id/tv_thisSessionAttendance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text="--"
+                                android:textColor="@color/grayheadingsdb" />
+                            />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/card_view_size"
+                android:layout_margin="@dimen/margin_medium"
+                android:layout_weight="1"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/CVAttendanceTaken_tvtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_app_green"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_small"
+                        android:text="@string/attendance_taken"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_attendance_taken"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/CVAttendanceTaken_tvtitle"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_small"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:id="@+id/llAttendanceTaken_Count"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_today"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text="Today: "
+                                android:textColor="@color/grayheadingsdb" />
+
+                            <TextView
+                                android:id="@+id/CVAttendanceTaken_tvTodayAttendanceCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/blue_button_rounded_bg"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text="0/0"
+                                android:textColor="@color/grayheadingsdb" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/blue_button_rounded_bg"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/todayAttendanceCount_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/padding_small"
+                                android:text="Today Attendance"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/text_size_small"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llAttendanceTaken_Last30DaysCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_lastthirtydays"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text="Last 30 Days: "
+                                android:textColor="@color/grayheadingsdb" />
+
+                            <TextView
+                                android:id="@+id/CVAttendanceTaken_tv30DaysAttendanceCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/blue_button_rounded_bg"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text="0/0"
+                                android:textColor="@color/grayheadingsdb" />
+                            />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/blue_button_rounded_bg"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/last30DaysAttendanceCount_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/padding_small"
+                                android:text="Last 30 days Attendance"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/text_size_small"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!--SSR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_accessibility"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/card_view_size"
+                android:layout_margin="@dimen/margin_medium"
+                android:layout_weight="1"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:id="@+id/rl_accessiblity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/CVssr_tvtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_app_green"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_small"
+                        android:text="@string/accessibility"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/CVssr_btnNewEnrollment"
+                        android:layout_below="@+id/CVssr_tvtitle"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_small"
+                        android:weightSum="1.7">
+
+                        <LinearLayout
+                            android:id="@+id/ll1_accessibility"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical"
+                            android:weightSum="3">
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="@string/ssr"
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/CVssr_tvStudentCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/margin_small"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="0"
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="Cpty:"
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_maxCapacity"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/margin_small"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="0"
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_below="@+id/linearLayout1"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="Op. Utl"
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/CVssr_tvOperationsUtilization"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/margin_small"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="0"
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll2_accessibility"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/linearLayout2"
+                            android:layout_weight=".5"
+                            android:orientation="vertical"
+                            android:weightSum="3">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="Boys:"
+                                    android:textColor="@color/blue" />
+
+                                <TextView
+                                    android:id="@+id/CVssr_tvBoys"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+
+                                    android:text="0"
+                                    android:textColor="@color/blue" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+
+                                    android:text="Girls:"
+                                    android:textColor="@color/orange" />
+
+                                <TextView
+                                    android:id="@+id/CVssr_tvGirls"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="0"
+                                    android:textColor="@color/orange" />
+                                />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/maleRatio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="0"
+                                    android:textColor="@color/blue" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingLeft="@dimen/margin_small"
+                                    android:paddingRight="@dimen/margin_small"
+                                    android:text=":"
+                                    android:textColor="@color/colorBlack" />
+
+                                <TextView
+                                    android:id="@+id/femaleRatio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="0"
+                                    android:textColor="@color/orange" />
+                                />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--Avg Monthly Fees Collection-->
+                        <LinearLayout
+                            android:id="@+id/ll3_accessibility"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:orientation="vertical"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:padding="@dimen/margin_small"
+                                    android:text="@string/fee_target"
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_FeeTarget"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end"
+                                    android:padding="@dimen/margin_small"
+                                    android:text=""
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_SetFee"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:padding="@dimen/margin_small"
+                                    android:text="@string/avg_set_fee"
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_avgSetFee"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end"
+                                    android:padding="@dimen/margin_small"
+                                    android:text=""
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:padding="@dimen/margin_small"
+                                    android:text="@string/difference"
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_difference"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end"
+                                    android:padding="@dimen/margin_small"
+                                    android:text=""
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/CVssr_btnNewEnrollment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/margin_small"
+                        android:background="@drawable/blue_button_rounded_bg"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/new_enrollment"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_button"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                app:cardElevation="@dimen/card_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_app_green"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/margin_small"
+                        android:paddingBottom="@dimen/margin_small"
+                        android:text="@string/session_info"
+                        android:textColor="@color/grayheadingsdb"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_noData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="No Data Found"
+                        android:textColor="@color/orange"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_sessionInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:padding="@dimen/padding">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <!--Bottom 5 attendance-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            app:cardElevation="@dimen/card_elevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_app_green"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_small"
+                    android:text="@string/weakest_attendance"
+                    android:textColor="@color/grayheadingsdb"
+                    android:textSize="@dimen/text_size_heading"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:id="@+id/bottom_five_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f7fafc"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_small"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:text="Name" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".2"
+                        android:text="GR:NO" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        android:text="Class/Sec" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        android:text="Absent Days" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottom_five_header_am"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f7fafc"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_small"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="School Name" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="School Attendance" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_bottom_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:padding="@dimen/padding"
+                    android:paddingEnd="@dimen/padding">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/tvWeakestAttendanceSeeAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:gravity="right"
+                    android:padding="@dimen/margin_small"
+                    android:text="See all"
+                    android:textColor="@color/carolina" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

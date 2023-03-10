@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/attendacnce_cell_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/tiny_margin"
+    android:layout_marginTop="@dimen/tiny_margin"
+    android:elevation="@dimen/card_elevation"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/light_blue_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <include
+            layout="@layout/attendence_header"
+            android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_small"
+                android:gravity="center"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tv_class_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:maxEms="@integer/maxEms"
+                    android:text="13-Green"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/gr_No"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:maxEms="1"
+                    android:text="1234"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/tv_name_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".35"
+                    android:maxEms="@integer/maxEms"
+                    android:text="Badar Arain"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size" />
+
+                <LinearLayout
+                    android:id="@+id/ll_attendance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/app_green"
+                    android:layout_weight=".2"
+                    android:padding="@dimen/padding_small"
+                    android:layout_gravity="end"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/tv_attendance_head"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text=""
+                        android:textColor="@color/white_2"
+                        android:textSize="@dimen/text_big"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/tv_attendance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size"
+                        />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:weightSum="1"
+                    android:layout_marginLeft="@dimen/element_margin2"
+                    android:layout_weight=".45"
+                    android:id="@+id/rg_attendance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_weight=".55"
+                        android:id="@+id/present"
+                        android:layout_marginLeft="@dimen/element_margin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:layout_centerVertical="true"
+                        app:buttonTint="@color/app_green" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/absent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/element_margin"
+                        android:layout_weight=".5"
+                        app:buttonTint="@color/red" />
+
+                    <!--<android.support.v7.widget.AppCompatRadioButton-->
+                    <!--android:layout_weight=".33"-->
+                    <!--android:id="@+id/leaves"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_marginLeft="@dimen/element_margin"-->
+                    <!--android:layout_marginRight="@dimen/element_margin"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--app:buttonTint="@color/blue" />-->
+
+                </RadioGroup>
+            </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

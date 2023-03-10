@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_tct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:visibility="visible"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tct_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_app_green"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_small"
+                        android:text="TCT Reg Employee Count"
+                        android:textColor="@color/grayheadingsdb"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tct_title"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_small">
+                    <LinearLayout
+                        android:id="@+id/tct_column_completed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="65dp"
+                            android:layout_weight="2"
+                            android:padding="@dimen/padding_small"
+                            android:text=""
+                            android:textColor="@color/grayheadingsdb"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="65dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/textview_border_black"
+                            android:padding="@dimen/padding_small"
+                            android:gravity="center"
+                            android:text="@string/mtt_column_name"
+                            android:textColor="@color/grayheadingsdb"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="65dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/textview_border_black"
+                            android:padding="@dimen/padding_small"
+                            android:gravity="center"
+                            android:text="@string/ett_column_name"
+                            android:textColor="@color/grayheadingsdb"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/ll_completed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:background="@drawable/textview_border_black"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/padding_small"
+                                android:text="@string/completed"
+                                android:textColor="@color/grayheadingsdb"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_mtt_completedCount"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/textview_border_black"
+                                android:layout_gravity="center"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:padding="@dimen/padding_small"
+                                android:textColor="@color/grayheadingsdb" />
+                            <TextView
+                                android:id="@+id/tv_ett_completedCount"
+                                android:layout_width="0dp"
+                                android:background="@drawable/textview_border_black"
+
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:padding="@dimen/padding_small"
+                                android:textColor="@color/grayheadingsdb" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_remaining"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:padding="@dimen/padding_small"
+                                android:background="@drawable/textview_border_black"
+                                android:text="@string/remaining"
+                                android:textColor="@color/grayheadingsdb"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tv_mtt_remainingCount"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/textview_border_black"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:padding="@dimen/padding_small"
+                                android:textColor="@color/grayheadingsdb" />
+
+                            <TextView
+                                android:id="@+id/tv_ett_remainingCount"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/textview_border_black"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:padding="@dimen/padding_small"
+                                android:textColor="@color/grayheadingsdb" />
+                        </LinearLayout>
+<!--                         Mandatory Test Tacker Remaining-->
+                        <LinearLayout
+                            android:id="@+id/ll_mtt_ett_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:background="@drawable/textview_border_black"
+                                android:padding="@dimen/padding_small"
+                                android:text="@string/total_mtt_ett"
+                                android:textColor="@color/grayheadingsdb"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_mtt_total"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:background="@drawable/textview_border_black"
+                                android:gravity="center"
+                                android:padding="@dimen/padding_small"
+                                android:textColor="@color/grayheadingsdb" />
+                            <TextView
+                                android:id="@+id/tv_ett_total"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:background="@drawable/textview_border_black"
+                                android:gravity="center"
+                                android:padding="@dimen/padding_small"
+                                android:textColor="@color/grayheadingsdb" />
+                        </LinearLayout>
+                        <!-- Eligible Test Tacker Remaining-->
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/ll_ett_remaining"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="2"-->
+<!--                                android:padding="@dimen/padding_small"-->
+<!--                                android:text="@string/ett_Remaining"-->
+<!--                                android:textColor="@color/grayheadingsdb"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tv_ett_remainingCount"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:gravity="start"-->
+<!--                                android:padding="@dimen/padding_small"-->
+<!--                                android:textColor="@color/grayheadingsdb" />-->
+<!--                        </LinearLayout>-->
+
+                        <LinearLayout
+                            android:id="@+id/ll_2sub"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:padding="@dimen/padding_small"
+                                android:text="2 Subjects:"
+                                android:textColor="@color/grayheadingsdb"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_2Sub_count"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:padding="@dimen/padding_small"
+                                android:textColor="@color/grayheadingsdb" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_1sub"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:padding="@dimen/padding_small"
+                                android:text="1 Subject:"
+                                android:textColor="@color/colorBlack"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_1Sub_count"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:padding="@dimen/padding_small"
+                                android:textColor="@color/colorBlack" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:padding="@dimen/padding_small"
+                                android:text="0 Subjects:"
+                                android:textColor="@color/colorBlack"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_0Sub_count"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:padding="@dimen/padding_small"
+                                android:textColor="@color/colorBlack" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_medium"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/progress_tvtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_app_green"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/padding"
+                        android:paddingTop="@dimen/margin_small"
+                        android:paddingEnd="@dimen/padding"
+                        android:paddingBottom="@dimen/margin_small"
+                        android:text="Employees Profile Progress"
+                        android:textColor="@color/grayheadingsdb"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/progress_tvtitle"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/margin_small">
+
+
+                        <ProgressBar
+                            android:id="@+id/profileProgress"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:clickable="false"
+                            android:indeterminate="false"
+                            android:progressDrawable="@drawable/progressbar" />
+
+                        <TextView
+                            android:id="@+id/tv_progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/profileProgress"
+                            android:layout_centerHorizontal="true"
+                            android:padding="@dimen/padding_small"
+                            android:text="0%"
+                            android:textColor="@color/grayheadingsdb"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_resignation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Resignation_tvtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_app_green"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_small"
+                        android:text="Pending Approvals"
+                        android:textColor="@color/grayheadingsdb"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Resignation_tvtitle"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_small">
+
+                        <LinearLayout
+                            android:id="@+id/ll_pendingResign"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:padding="@dimen/padding_small"
+                                android:text="Separations:"
+                                android:textColor="@color/grayheadingsdb"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_pendingResignations"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:padding="@dimen/padding_small"
+                                android:text="0"
+                                android:textColor="@color/grayheadingsdb" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_approvedResign"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:padding="@dimen/padding_small"
+                                android:text="Approved:"
+                                android:textColor="@color/colorBlack"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_approvedResignation"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:padding="@dimen/padding_small"
+                                android:text="0"
+                                android:textColor="@color/colorBlack" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/padding_small"
+                                android:text="Last Apr:"
+                                android:textColor="@color/colorBlack"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_lastApprovedResignations"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:padding="@dimen/padding_small"
+                                android:text=""
+                                android:textColor="@color/colorBlack" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_termination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:visibility="gone"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Terminations_tvtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_app_green"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_small"
+                        android:text="@string/terminations"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Terminations_tvtitle"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_small">
+
+                        <LinearLayout
+                            android:id="@+id/ll_pendingTermin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:padding="@dimen/padding_small"
+                                android:text="Pending:"
+                                android:textColor="@color/colorBlack"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_pendingTerminations"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:padding="@dimen/padding_small"
+                                android:text="0"
+                                android:textColor="@color/colorBlack" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_approvedTermin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:padding="@dimen/padding_small"
+                                android:text="Approved:"
+                                android:textColor="@color/colorBlack"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_approvedTerminations"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:padding="@dimen/padding_small"
+                                android:text="0"
+                                android:textColor="@color/colorBlack" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/padding_small"
+                                android:text="Last Apr:"
+                                android:textColor="@color/colorBlack"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_lastApprovedTerminations"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:padding="@dimen/padding_small"
+                                android:text=""
+                                android:textColor="@color/colorBlack" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_leaves"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:id="@+id/rl_leaves"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Leave_tvtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_app_green"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_small"
+                        android:text="@string/leaves"
+                        android:textColor="@color/grayheadingsdb"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Leave_tvtitle"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_small">
+
+                        <LinearLayout
+                            android:id="@+id/ll_pendingLeaves"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:padding="@dimen/padding_small"
+                                android:text="Pending:"
+                                android:textColor="@color/grayheadingsdb"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_pendingLeaves"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:padding="@dimen/padding_small"
+                                android:text="0"
+                                android:textColor="@color/grayheadingsdb" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_approvedLeaves"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:padding="@dimen/padding_small"
+                                android:text="Approved:"
+                                android:textColor="@color/grayheadingsdb"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_approvedLeaves"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:padding="@dimen/padding_small"
+                                android:text="0"
+                                android:textColor="@color/grayheadingsdb" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/padding_small"
+                                android:text="Last Apr:"
+                                android:textColor="@color/grayheadingsdb"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_lastApprovedLeaves"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:padding="@dimen/padding_small"
+                                android:text=""
+                                android:textColor="@color/grayheadingsdb" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_attendance_taken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:id="@+id/rl_attendance_taken"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/AttendanceTaken_tvtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_app_green"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_small"
+                        android:text="Attendance Taken"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_attendance_taken"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/AttendanceTaken_tvtitle"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_small"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:id="@+id/tv_label_lastthirtydays"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:padding="@dimen/padding_small"
+                            android:text="Last 30 Days:"
+                            android:textColor="@color/grayheadingsdb"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_attendanceTaken30DaysCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/blue_button_rounded_bg"
+                            android:gravity="center"
+                            android:padding="@dimen/padding_small"
+                            android:text="0"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_empInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="@dimen/card_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_app_green"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_small"
+                        android:text="Employee Count"
+                        android:textColor="@color/grayheadingsdb"
+                        android:textSize="@dimen/text_size_heading"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_noData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="No Data Found"
+                        android:textColor="@color/orange"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding">
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_empInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/layout_employee_info_header_item" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2.5"
+                                android:background="@drawable/textview_border_black"
+                                android:gravity="center"
+                                android:padding="@dimen/padding_small"
+                                android:text="Total Employees"
+                                android:textColor="@color/grayheadingsdb"
+                                android:textSize="@dimen/text_receipt_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/total_count"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border_black"
+                                android:gravity="center"
+                                android:padding="@dimen/padding_small"
+                                android:textColor="@color/grayheadingsdb"
+                                android:textSize="@dimen/text_receipt_size"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

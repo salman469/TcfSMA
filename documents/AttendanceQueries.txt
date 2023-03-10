@@ -1,0 +1,125 @@
+SELECT s.*, sc.class_id, c.name class_name, cs.name section_name, COALESCE(NULLIF(sa.isabsent,''), 'p') as getAttendance  FROM student s INNER JOIN school_class sc ON sc.id = s.schoolclass_id INNER JOIN class c ON sc.class_id = c.id INNER JOIN section cs ON sc.section_id = cs.id LEFT JOIN student_attendance sa ON s.id = sa.student_id LEFT JOIN attendance a ON a.id = sa.attendance_id WHERE sc.school_id = 3 AND a.for_date = '2019-03-25' AND c.id = 3 AND cs.id = 1 ORDER BY s.student_gr_no
+
+select -JulianDay(strftime('%Y-%m-%d',date('now','start of month'))) + JulianDay(strftime('%Y-%m-%d',date('now','start of month','+1 month'))) as Total_days,
+sum(1+JulianDay(c.activity_end_date) - JulianDay(c.activity_start_date)) as off_days 
+from calendar c INNER JOIN school s ON c.school_id = s.id and c.academic_session_id = s.academic_session_id
+where s.id = 3 and c.activity_start_date >= datetime('now','start of month') 
+and c.activity_end_date <= datetime('now','start of month','+1 month') and holiday_type_id in (2,3,4)
+group by s.start_date, s.end_date
+
+SELECT s.*, sc.class_id, c.name class_name, cs.name section_name,
+ COALESCE(NULLIF(sa.isabsent,''), 'p') as getAttendance  
+ FROM student s 
+ INNER JOIN school_class sc ON sc.id = s.schoolclass_id 
+ INNER JOIN class c ON sc.class_id = c.id 
+ INNER JOIN section cs ON sc.section_id = cs.id
+ LEFT JOIN student_attendance sa ON s.id = sa.student_id 
+ LEFT JOIN attendance a ON a.id = sa.attendance_id WHERE sc.school_id = 989 
+ AND a.for_date = '2019-03-25' AND c.id = 3 AND cs.id = 1 
+ ORDER BY s.student_gr_no
+
+SELECT AVG(daysAbsent/classStrength) AS absentRatio FROM (
+SELECT COUNT(*) AS daysAbsent, (SELECT COUNT(*) FROM Student WHERE schoolclass_id = sc.id) AS classStrength, a.for_date, sc.id
+FROM Student s INNER JOIN School_Class sc ON sc.id = s.schoolclass_id
+INNER JOIN Student_Attendance sa ON sa.student_id = s.id
+INNER JOIN Attendance a ON a.id = sa.attendance_id AND a.school_class_id = sc.id
+WHERE COALESCE(NULLIF(sa.isabsent,''), 'P') <> 'P' AND sc.school_id = 989
+GROUP BY a.for_date, sc.id) AS absentCount
+
+
+SELECT AVG(1.00*daysAbsent/classStrength)*100 AS absentPercent FROM (
+SELECT COUNT(*) AS daysAbsent, (SELECT COUNT(*) FROM Student WHERE schoolclass_id = sc.id) AS classStrength, a.for_date, sc.id
+FROM Student s INNER JOIN School_Class sc ON sc.id = s.schoolclass_id
+INNER JOIN Student_Attendance sa ON sa.student_id = s.id
+INNER JOIN Attendance a ON a.id = sa.attendance_id AND a.school_class_id = sc.id
+WHERE COALESCE(NULLIF(sa.isabsent,''), 'P') <> 'P' AND sc.school_id = 989
+AND a.for_date >= startdate AND a.for_date < enddate
+GROUP BY a.for_date, sc.id) AS absentCount
+
+
+SELECT s.id ,s.schoolclass_id , s.student_name , s.student_gr_no , s.is_active, sc.school_id  , 
+c.name AS CLASS_NAME ,absentPercent, sec.name AS SECTION_NAAME, sch.school_name 
+FROM student s 
+INNER JOIN (SELECT AVG(1.00*daysAbsent/classStrength)*100 AS absentPercent, student_id FROM (
+	SELECT COUNT(*) AS daysAbsent, (SELECT COUNT(*) FROM Student WHERE schoolclass_id = sc.id) AS classStrength, a.for_date, sc.id, s.id AS student_id
+	FROM Student s INNER JOIN School_Class sc ON sc.id = s.schoolclass_id
+	INNER JOIN Student_Attendance sa ON sa.student_id = s.id
+	INNER JOIN Attendance a ON a.id = sa.attendance_id AND a.school_class_id = sc.id 
+	WHERE COALESCE(NULLIF(sa.isabsent,''), 'P') <> 'P'
+	GROUP BY a.for_date, sc.id, s.id) AS absentCount
+	GROUP BY student_id
+	ORDER BY absentPercent DESC LIMIT 5) AS studentAttendance ON studentAttendance.student_id = s.id
+INNER JOIN school_class sc on sc.id = s.schoolclass_id 
+INNER JOIN class c on c.id = sc.class_id 
+INNER JOIN section sec on sec.id = sc.section_id 
+INNER JOIN school sch on sch.id = sc.school_id 
+WHERE sc.school_id 
+IN(3,989) AND s.is_active = '1' 
+
+
+SELECT s.id ,s.schoolclass_id , s.student_name , s.student_gr_no , s.is_active, sc.school_id  , 
+c.name AS CLASS_NAME ,absentPercent, sec.name AS SECTION_NAAME, sch.school_name 
+FROM student s 
+INNER JOIN (
+SELECT  100 - (AVG(1.00*daysAbsent/classStrength)*100) AS absentPercent, student_id FROM (
+	SELECT COUNT(*) AS daysAbsent, (SELECT COUNT(*) FROM Student WHERE schoolclass_id = sc.id) AS classStrength, a.for_date, sc.id, s.id AS student_id
+	FROM Student s INNER JOIN School_Class sc ON sc.id = s.schoolclass_id
+	INNER JOIN Student_Attendance sa ON sa.student_id = s.id
+	INNER JOIN Attendance a ON a.id = sa.attendance_id AND a.school_class_id = sc.id 
+	WHERE COALESCE(NULLIF(sa.isabsent,''), 'P') <> 'P'
+ AND strftime('%m',a.for_date) = '989' AND strftime('%Y',a.for_date) = '989' GROUP BY a.for_date, sc.id, s.id) AS absentCount
+	GROUP BY student_id
+	ORDER BY absentPercent DESC LIMIT 5) AS studentAttendance ON studentAttendance.student_id = s.id
+INNER JOIN school_class sc on sc.id = s.schoolclass_id 
+INNER JOIN class c on c.id = sc.class_id 
+INNER JOIN section sec on sec.id = sc.section_id 
+INNER JOIN school sch on sch.id = sc.school_id 
+WHERE sc.school_id 
+IN(3) AND s.is_active = '1' AND absentPercent < 85
+ 
+SELECT 
+	COUNT(a.id) AS daysAbsent, 
+	(SELECT COUNT(a.id) FROM Student WHERE schoolclass_id = sc.id) AS classStrength, 
+	a.date AS for_date, sc.id, s.id AS student_id
+FROM (WITH RECURSIVE dates(date) AS (
+	  VALUES('2019-01-01') 
+	  UNION ALL
+	  SELECT date(date, '+1 day')
+	  FROM dates
+	  WHERE date < '2019-01-31'
+	) SELECT date, a.* FROM dates LEFT OUTER JOIN Attendance a ON dates.date = a.for_date) AS a
+LEFT OUTER JOIN School_Class sc ON a.school_class_id = sc.id 
+LEFT OUTER JOIN Student_Attendance sa ON a.id = sa.attendance_id AND COALESCE(NULLIF(sa.isabsent,''), 'P') <> 'P'
+LEFT OUTER JOIN Student s ON sa.student_id = s.id AND sc.id = s.schoolclass_id 
+GROUP BY a.date, sc.id, s.id
+
+//updating queries
+
+SELECT COUNT(*) AS daysAbsent, 
+(SELECT COUNT(*) FROM Student WHERE schoolclass_id = sc.id) AS classStrength, a.for_date, sc.id
+FROM Student s INNER JOIN School_Class sc ON sc.id = s.schoolclass_id
+INNER JOIN Student_Attendance sa ON sa.student_id = s.id
+INNER JOIN Attendance a ON a.id = sa.attendance_id AND a.school_class_id = sc.id
+WHERE COALESCE(NULLIF(sa.isabsent,''), 'P') <> 'P' AND sc.school_id = 989
+GROUP BY a.for_date, sc.id
+
+SELECT 
+	COUNT(a.id) AS daysAbsent, 
+	(SELECT COUNT(a.id) FROM Student WHERE schoolclass_id = sc.id) AS classStrength, 
+	a.date AS for_date, sc.id, s.id AS student_id
+FROM (WITH RECURSIVE dates(date) AS (
+	  VALUES('2019-01-01') 
+	  UNION ALL
+	  SELECT date(date, '+1 day')
+	  FROM dates
+	  WHERE date < '2019-01-31'
+	) SELECT date, a.* FROM dates LEFT OUTER JOIN Attendance a ON dates.date = a.for_date) AS a
+LEFT OUTER JOIN School_Class sc ON a.school_class_id = sc.id 
+LEFT OUTER JOIN Student_Attendance sa ON a.id = sa.attendance_id AND COALESCE(NULLIF(sa.isabsent,''), 'P') <> 'P'
+LEFT OUTER JOIN Student s ON sa.student_id = s.id AND sc.id = s.schoolclass_id 
+GROUP BY a.date, sc.id, s.id
+
+
+//attendance total
+SELECT (SELECT COUNT(*) FROM Student WHERE schoolclass_id = sc.id) AS classStrength, sc.id
+FROM School_Class sc WHERE sc.school_id = 989) AS classCapacity

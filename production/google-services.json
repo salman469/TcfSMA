@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "364801830906",
+    "project_id": "tcf-sma",
+    "storage_bucket": "tcf-sma.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364801830906:android:a1b1edcf70235235227e43",
+        "android_client_info": {
+          "package_name": "com.tcf.sma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364801830906-3genq46bgdl38nj6k3ftsgtuid8d2fq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClnWkttjHu8k4gN-KSoFkR8jT_5fzypIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364801830906-3genq46bgdl38nj6k3ftsgtuid8d2fq4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

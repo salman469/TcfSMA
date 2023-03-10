@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_select_school"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_color"
+    tools:context="com.tcf.sma.Activities.School_list_Activity">
+
+    <!--<include layout="@layout/header_layout" />-->
+
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        app:queryHint="Search"
+        app:iconifiedByDefault="false"
+        android:id="@+id/sv_school"
+        android:layout_height="wrap_content">
+
+
+    </androidx.appcompat.widget.SearchView>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/rv_schoollist"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/white_color"-->
+        <!--android:layout_marginTop="@dimen/margin_small"-->
+        <!--android:elevation="@dimen/margin_small" />-->
+
+    <ExpandableListView
+        android:id="@+id/el_schoollist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl"
+        android:background="@color/white_color"
+        android:layout_marginTop="@dimen/margin_small"
+        android:elevation="@dimen/margin_small" />
+</LinearLayout>

@@ -1,0 +1,1633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_school_information"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    tools:context=".Activities.SchoolDashboardActivity">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/margin_medium"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_small"
+                            android:text="School:"
+                            android:textStyle="bold"
+                            android:textColor="@color/grayheadingsdb"
+                            android:textSize="@dimen/text_size" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_border">
+
+                            <Spinner
+                                android:id="@+id/spnSchools"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/text_size" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            android:padding="@dimen/padding_small">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Campus: "
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_campusName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:weightSum="1"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_weight=".5"
+                                android:padding="@dimen/padding_small">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Region: "
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_regionName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/text_size" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_weight=".5"
+                                android:padding="@dimen/padding_small">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Area: "
+                                    android:textColor="@color/grayheadingsdb"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_areaName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/text_size" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                <!--Session Info-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_session_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:visibility="gone"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="@dimen/card_elevation">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_sessionInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/light_app_green"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_small"
+                            android:text=""
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_heading"
+                            android:textStyle="bold" />
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/session_head"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignEnd="@+id/tv_sessionInfo"-->
+                        <!--android:text="(2018-2019)"-->
+                        <!--android:gravity="center"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:visibility="gone"-->
+                        <!--android:padding="@dimen/margin_small"-->
+                        <!--android:textColor="@color/colorBlack" />-->
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_sessionInfo"
+                            android:orientation="vertical"
+                            android:padding="@dimen/margin_small">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:text="Start Date: "
+                                        android:textColor="@color/colorBlack"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tv_sessionStartDate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right"
+                                        android:text="0"
+                                        android:textColor="@color/colorBlack" />
+                                    />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:text="End Date: "
+                                        android:textColor="@color/colorBlack"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tv_sessionEndDate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:text="0"
+                                        android:textColor="@color/colorBlack" />
+                                    />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/margin_small"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:text="Days Elapsed: "
+                                        android:textColor="@color/colorBlack"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tv_daysElapsed"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right"
+                                        android:text="0"
+                                        android:textColor="@color/colorBlack" />
+                                    />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:text="Days Remaning: "
+                                        android:textColor="@color/colorBlack"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tv_daysRemaning"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right"
+                                        android:text="0"
+                                        android:textColor="@color/colorBlack" />
+                                    />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/margin_small"
+                                android:weightSum="2">
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:text="Working Days: "
+                                        android:textColor="@color/colorBlack"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tv_workingDays"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right"
+                                        android:text="0"
+                                        android:textColor="@color/colorBlack" />
+                                    />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--SSR and Sync Status-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_view_size"
+                        android:layout_margin="@dimen/margin_medium"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="2dp"
+                        android:visibility="gone"
+                        app:cardElevation="@dimen/card_elevation">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_accessiblity"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/CVssr_tvtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/light_app_green"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text="@string/accessibility"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size_heading"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/CVssr_btnNewEnrollment"
+                                android:layout_below="@+id/CVssr_tvtitle"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/margin_small"
+                                android:weightSum="1">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:orientation="vertical"
+                                    android:weightSum="3">
+
+                                    <LinearLayout
+                                        android:id="@+id/linearLayout1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:padding="2dp"
+                                            android:text="@string/ssr"
+                                            android:textColor="@color/colorBlack"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/CVssr_tvStudentCount"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/margin_small"
+                                            android:gravity="center"
+                                            android:padding="2dp"
+                                            android:text="0"
+                                            android:textColor="@color/colorBlack"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/linearLayout0"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:padding="2dp"
+                                            android:text="Cpty:"
+                                            android:textColor="@color/colorBlack"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/tv_maxCapacity"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/margin_small"
+                                            android:gravity="center"
+                                            android:padding="2dp"
+                                            android:text="0"
+                                            android:textColor="@color/colorBlack"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/linearLayout2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_below="@+id/linearLayout1"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:padding="2dp"
+                                            android:text="Op. Utl"
+                                            android:textColor="@color/colorBlack"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/CVssr_tvOperationsUtilization"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/margin_small"
+                                            android:gravity="center"
+                                            android:padding="2dp"
+                                            android:text="0"
+                                            android:textColor="@color/colorBlack"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/CVssr_llGenderCount"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/linearLayout2"
+                                    android:layout_weight=".5"
+                                    android:orientation="vertical"
+                                    android:weightSum="3">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:padding="2dp"
+                                            android:text="Boys:"
+                                            android:textColor="@color/blue" />
+
+                                        <TextView
+                                            android:id="@+id/CVssr_tvBoys"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:padding="2dp"
+
+                                            android:text="0"
+                                            android:textColor="@color/blue" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:padding="2dp"
+
+                                            android:text="Girls:"
+                                            android:textColor="@color/orange" />
+
+                                        <TextView
+                                            android:id="@+id/CVssr_tvGirls"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:padding="2dp"
+                                            android:text="0"
+                                            android:textColor="@color/orange" />
+                                        />
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/maleRatio"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:padding="2dp"
+                                            android:text="45"
+                                            android:textColor="@color/blue" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:paddingLeft="@dimen/margin_small"
+                                            android:paddingRight="@dimen/margin_small"
+                                            android:text=":"
+                                            android:textColor="@color/colorBlack" />
+
+                                        <TextView
+                                            android:id="@+id/femaleRatio"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:padding="2dp"
+                                            android:text="0"
+                                            android:textColor="@color/orange" />
+                                        />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/CVssr_btnNewEnrollment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="@dimen/margin_small"
+                                android:background="@drawable/blue_button_rounded_bg"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_button"
+                                android:textStyle="bold"
+                                android:text="@string/new_enrollment" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_view_size"
+                        android:layout_margin="@dimen/margin_medium"
+                        android:layout_weight="2"
+                        app:cardCornerRadius="2dp"
+                        android:visibility="gone"
+                        app:cardElevation="@dimen/card_elevation">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_syncStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/CVSyncStatus_tvtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/light_app_green"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text="@string/sync_status"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size_heading"
+                                android:textStyle="bold" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/CVSyncStatus_tvtitle"
+                                android:orientation="vertical"
+                                android:padding="@dimen/margin_small">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="left"
+                                        android:text="Last sync: "
+                                        android:textColor="@color/colorBlack"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/tv_lastSyncOn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text=""
+                                        android:textColor="@color/colorBlack"
+
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_daysSince"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_daysSince"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:text="Days since: "
+                                        android:textColor="@color/colorBlack"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/tv_syncDaysSince"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text=""
+                                        android:textColor="@color/colorBlack"
+
+                                        />
+                                    />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_recordsPending"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.8"
+                                        android:gravity="left"
+                                        android:text="Records pending to sync:"
+                                        android:textColor="@color/colorBlack"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/pendingRecordsSync"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.2"
+                                        android:gravity="right"
+                                        android:text=""
+                                        android:textColor="@color/colorBlack"
+
+                                        />
+                                    />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/CVSyncStatus_btnSyncNow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/CVCashInHand_tvAmount"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/margin_medium"
+                                    android:background="@drawable/blue_button_rounded_bg"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_size_button"
+                                    android:textStyle="bold"
+                                    android:text="Sync Now?" />
+
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <!--Attendance and Attendance taken-->
+                <LinearLayout
+                    android:id="@+id/ll_attendance_attTaken"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_view_size"
+                        android:layout_margin="@dimen/margin_medium"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="2dp"
+                        android:visibility="gone"
+                        app:cardElevation="@dimen/card_elevation">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/CVAttendance_tvtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/light_app_green"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text="@string/attendance"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size_heading"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/CVssr_tvAttendancePercentage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/CVAttendance_tvtitle"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/margin_small"
+                                android:text="0%"
+                                android:textColor="@color/colorBlack"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/CVssr_tvAttendancePercentage"
+                                android:orientation="vertical"
+                                android:padding="@dimen/margin_small"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="@dimen/margin_small"
+                                        android:text="Today: "
+                                        android:textColor="@color/colorBlack" />
+
+                                    <TextView
+                                        android:id="@+id/tv_todayAttendance"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="@dimen/margin_small"
+                                        android:text="Nil"
+                                        android:textColor="@color/colorBlack" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="@dimen/margin_small"
+                                        android:text="This month: "
+                                        android:textColor="@color/colorBlack" />
+
+                                    <TextView
+                                        android:id="@+id/tv_thisMonthAttendance"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="@dimen/margin_small"
+                                        android:text="--"
+                                        android:textColor="@color/colorBlack" />
+                                    />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="@dimen/margin_small"
+                                        android:text="This Session: "
+                                        android:textColor="@color/colorBlack" />
+
+                                    <TextView
+                                        android:id="@+id/tv_thisSessionAttendance"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="@dimen/margin_small"
+                                        android:text="--"
+                                        android:textColor="@color/colorBlack" />
+                                    />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_view_size"
+                        android:layout_margin="@dimen/margin_medium"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="2dp"
+                        android:visibility="gone"
+                        app:cardElevation="@dimen/card_elevation">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/CVAttendanceTaken_tvtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/light_app_green"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text="@string/attendance_taken"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size_heading"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_attendance_taken"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/CVAttendanceTaken_tvtitle"
+                                android:orientation="vertical"
+                                android:padding="@dimen/margin_small"
+                                android:weightSum="1">
+
+                                <LinearLayout
+                                    android:id="@+id/llAttendanceTaken_Count"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_today"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="@dimen/margin_small"
+                                        android:text="Today: "
+                                        android:textColor="@color/colorBlack" />
+
+                                    <TextView
+                                        android:id="@+id/CVAttendanceTaken_tvTodayAttendanceCount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="@dimen/margin_small"
+                                        android:background="@drawable/blue_button_rounded_bg"
+                                        android:text="0/0"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/blue_button_rounded_bg"
+                                    android:visibility="gone"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/todayAttendanceCount_btn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:padding="@dimen/padding_small"
+                                        android:textSize="@dimen/text_size_small"
+                                        android:text="Today Attendance"
+                                        android:textColor="@android:color/white"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llAttendanceTaken_Last30DaysCount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_lastthirtydays"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="@dimen/margin_small"
+                                        android:text="Last 30 Days: "
+                                        android:textColor="@color/colorBlack" />
+
+                                    <TextView
+                                        android:id="@+id/CVAttendanceTaken_tv30DaysAttendanceCount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="@dimen/margin_small"
+                                        android:background="@drawable/blue_button_rounded_bg"
+                                        android:text="0/0"
+                                        android:textColor="@color/white" />
+                                    />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/blue_button_rounded_bg"
+                                    android:visibility="gone"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/last30DaysAttendanceCount_btn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:padding="@dimen/padding_small"
+                                        android:textSize="@dimen/text_size_small"
+                                        android:text="Last 30 days Attendance"
+                                        android:textColor="@android:color/white"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <!--CashInHand and Receivables-->
+                <LinearLayout
+                    android:id="@+id/ll_cash_receivable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_view_size"
+                        android:layout_margin="@dimen/margin_medium"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="@dimen/card_elevation">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/CVCashInHand_tvtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/light_app_green"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text="Cash In Hand"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size_heading"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/CVCashInHand_tvtitle"
+                                android:orientation="vertical"
+                                android:weightSum="4"
+                                >
+                                <TextView
+                                    android:id="@+id/CVCashInHand_tvAmount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_below="@+id/CVCashInHand_tvtitle"
+                                    android:gravity="center"
+                                    android:padding="@dimen/margin_small"
+                                    android:text="Rs. 0"
+                                    android:textColor="@color/colorBlack"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/CVCashInHand_selectedSchool_tvAmount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:padding="@dimen/margin_small"
+                                    android:text="Rs. 0"
+                                    android:textColor="@color/colorBlack"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/CVCashInHand_btnDepositAmount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="@dimen/margin_medium"
+                                    android:background="@drawable/blue_button_rounded_bg"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_size_button"
+                                    android:textStyle="bold"
+                                    android:text="Deposit?"
+                                    android:layout_gravity="center"
+                                    />
+
+
+                                <TextView
+                                    android:id="@+id/CVCashInHand_tvDepositisDue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:padding="@dimen/margin_small"
+                                    android:text="Deposit is due"
+                                    android:textColor="@color/red"
+                                    android:textStyle="bold"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+
+
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_view_size"
+                        android:layout_margin="@dimen/margin_medium"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="@dimen/card_elevation">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/CVReceivables_tvtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/light_app_green"
+                                android:gravity="center"
+                                android:padding="@dimen/margin_small"
+                                android:text="@string/receivables"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size_heading"
+                                android:textStyle="bold" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/CVReceivables_tvtitle"
+                                android:orientation="vertical"
+                                android:padding="@dimen/margin_small">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="left"
+                                        android:text="Total Receivable: "
+                                        android:textColor="@color/colorBlack" />
+
+                                    <TextView
+                                        android:id="@+id/CVReceivables_tvTotalDue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text="1,562,387"
+                                        android:textColor="@color/colorBlack" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="@dimen/margin_small">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Total Received: "
+                                        android:textColor="@color/colorBlack" />
+
+                                    <TextView
+                                        android:id="@+id/CVReceivables_tvReceived"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text="3"
+                                        android:textColor="@color/colorBlack" />
+                                    />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="@dimen/margin_small">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="left"
+                                        android:text="Balance"
+                                        android:textColor="@color/orange" />
+
+                                    <TextView
+                                        android:id="@+id/CVReceivables_tvBalance"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text="159"
+                                        android:textColor="@color/orange" />
+                                    />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <!--Session Info-->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:visibility="gone"
+                    app:cardElevation="@dimen/card_elevation">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/light_app_green"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/margin_small"
+                            android:paddingBottom="@dimen/margin_small"
+                            android:text="@string/session_info"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_heading"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_noData"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="No Data Found"
+                            android:textColor="@color/orange"
+                            android:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_sessionInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_marginBottom="@dimen/margin_small"
+                            android:padding="@dimen/padding">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--Avg Fees Collection-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_avg_fees_collection"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/card_view_size"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="2dp"
+                    android:visibility="gone"
+                    app:cardElevation="@dimen/card_elevation">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/CVAvgFeesCollection_tvtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/light_app_green"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_small"
+                            android:text="@string/avg_fees_collection"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_heading"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/CVAvgFeesCollection_tvtitle"
+                            android:orientation="vertical"
+                            android:padding="@dimen/margin_small">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="left"
+                                    android:text="Target: "
+                                    android:textColor="@color/colorBlack" />
+
+                                <TextView
+                                    android:id="@+id/CVAvgFeesCollection_tvTarget"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/margin_small">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Last 30 Days: "
+                                    android:textColor="@color/colorBlack" />
+
+                                <TextView
+                                    android:id="@+id/CVAvgFeesCollection_tvLast30Days"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+
+                                    android:text="0"
+                                    android:textColor="@color/colorBlack" />
+                                />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/margin_small">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="left"
+                                    android:text="This session"
+                                    android:textColor="@color/colorBlack" />
+
+                                <TextView
+                                    android:id="@+id/CVAvgFeesCollection_tvThisSession"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:text="0"
+                                    android:textColor="@color/colorBlack" />
+                                />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/margin_small">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="left"
+                                    android:text="Off target"
+                                    android:textColor="@color/orange" />
+
+                                <TextView
+                                    android:id="@+id/CVAvgFeesCollection_tvOffTarget"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:text=""
+                                    android:textColor="@color/orange" />
+                                />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--Bottom 5 attendance-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:visibility="gone"
+                    app:cardElevation="@dimen/card_elevation">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/light_app_green"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_small"
+                            android:text="@string/weakest_attendance"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_heading"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:id="@+id/bottom_five_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#f7fafc"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/padding_small"
+                            android:visibility="gone"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".3"
+                                android:text="Name" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".2"
+                                android:text="GR:NO" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".25"
+                                android:text="Class/Sec" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".25"
+                                android:text="Absent Days" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/bottom_five_header_am"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#f7fafc"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/padding_small"
+                            android:visibility="gone"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".5"
+                                android:text="School Name" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".5"
+                                android:text="School Attendance" />
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_bottom_five"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/padding">
+
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                        <TextView
+                            android:id="@+id/tvWeakestAttendanceSeeAll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_small"
+                            android:gravity="right"
+                            android:padding="@dimen/margin_small"
+                            android:text="See all"
+                            android:textColor="@color/carolina" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--Highest Dues From Students-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:visibility="gone"
+                    app:cardElevation="@dimen/card_elevation">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/light_app_green"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_small"
+                            android:text="@string/highest_dues_from_students"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_heading"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#f7fafc"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/padding_small"
+                            android:visibility="gone"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".3"
+                                android:text="Name" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".2"
+                                android:text="GR:NO" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".25"
+                                android:text="Class/Sec" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".25"
+                                android:text="Amount" />
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvHighestDuesFromStudent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/bottom_five_card_cell">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                        <TextView
+                            android:id="@+id/tvHighestDuesFromStudentSeeAll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_small"
+                            android:gravity="right"
+                            android:padding="@dimen/margin_small"
+                            android:text="See all"
+                            android:textColor="@color/carolina" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <com.google.android.material.tabs.TabLayout
+                        style="@style/AppTabLayout"
+                        android:id="@+id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:tabPaddingBottom="0dp"
+                        app:tabPaddingEnd="0dp"
+                        app:tabPaddingStart="0dp"
+                        app:tabPaddingTop="0dp"                        app:tabMode="scrollable"
+                        app:tabTextAppearance="@style/AppTabTextAppearance"
+                        />
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

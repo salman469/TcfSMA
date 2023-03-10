@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="5.5">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:padding="@dimen/padding_small"
+        android:text="Total"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_prevRecv"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.33"
+        android:gravity="right"
+        android:padding="@dimen/padding_small"
+        android:text="XXXXXX"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold" />
+
+    <!--<View-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:padding="@dimen/padding_small" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/et_todaySales"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="right"-->
+        <!--android:padding="@dimen/padding_small"-->
+        <!--android:text="xxxx"-->
+        <!--android:textColor="@color/colorBlack"-->
+        <!--android:textSize="@dimen/text_size"-->
+        <!--android:textStyle="bold" />-->
+
+    <TextView
+        android:id="@+id/et_amountRecv"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.33"
+        android:gravity="right"
+        android:padding="@dimen/padding_small"
+        android:text="xxxx"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/et_amountBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.33"
+        android:gravity="right"
+        android:padding="@dimen/padding_small"
+        android:text="xxxxx"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold" />
+
+</LinearLayout>

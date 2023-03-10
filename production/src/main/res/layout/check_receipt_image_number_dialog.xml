@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="@dimen/margin_small"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="@dimen/margin_small"
+    android:elevation="@dimen/card_elevation"
+    android:padding="@dimen/padding_small"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_slip_sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/big_margin"
+            android:visibility="visible"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_small"
+                android:text="Cheque/Receipt"
+                android:textColor="@color/colorBlack"
+                />
+
+            <Spinner
+                android:id="@+id/sp_attachments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.25"
+                android:spinnerMode="dialog"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <!--<LinearLayout
+            android:id="@+id/ll_depositslip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_small"
+                android:text="Deposite Slip #"
+                android:textColor="@color/colorBlack"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_depositslipno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:maxLength="10"
+                android:layout_weight="1.25"
+                android:inputType="number"
+                />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_cheque"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_small"
+                android:text="Cheque #"
+                android:textColor="@color/colorBlack"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_chequeno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:inputType="number"
+                android:maxLength="10"
+                android:layout_weight="1.25"
+                android:padding="@dimen/padding_small"
+                />
+
+        </LinearLayout>-->
+
+        <ImageView
+            android:id="@+id/iv_capture"
+            android:background="@drawable/camera"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginBottom="@dimen/big_margin"
+            android:layout_width="@dimen/ic_edit_profile_size"
+            android:layout_height="@dimen/ic_edit_profile_size"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:text="Capture" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

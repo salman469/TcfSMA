@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/margin_small"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/school_name5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:text="Badar Jamal Arain Tdm"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/studetn_strength_absent5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:text="54"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size" />
+
+
+</LinearLayout>
